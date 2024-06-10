@@ -1,0 +1,79 @@
+Quiz 14: Architettura dei Sistemi Operativi
+Qual è la principale differenza tra un Kernel Monolitico e un Micro-Kernel in termini di struttura e funzionamento?
+
+A) Un Kernel Monolitico delega tutte le operazioni ai driver esterni, mentre un Micro-Kernel incorpora tutti i driver al suo interno.
+B) Un Kernel Monolitico esegue tutte le funzioni del sistema operativo in un unico spazio di indirizzamento, mentre un Micro-Kernel esegue solo le funzioni di base nel kernel e delega altre operazioni ai server in user space.
+C) Un Kernel Monolitico utilizza il multitasking, mentre un Micro-Kernel non lo supporta.
+D) Un Kernel Monolitico è utilizzato solo nei sistemi operativi legacy, mentre un Micro-Kernel è utilizzato nei sistemi moderni.
+Qual è uno svantaggio tipico dell'approccio del Micro-Kernel rispetto al Kernel Monolitico?
+
+A) Maggiore consumo di memoria
+B) Complessità nella gestione del multitasking
+C) Maggiore overhead nella comunicazione tra moduli
+D) Maggiore vulnerabilità agli attacchi di sicurezza
+Quiz 15: Sincronizzazione e Concorrenza
+In un sistema operativo, qual è il problema della "sezione critica" e come viene generalmente risolto?
+
+A) La "sezione critica" è una parte del codice che non può essere interrotta; viene risolta utilizzando segmenti non interrompibili del codice.
+B) La "sezione critica" è una parte del codice che accede a risorse condivise; viene risolta utilizzando meccanismi di sincronizzazione come mutex e semafori.
+C) La "sezione critica" è una parte del codice che deve essere eseguita in tempo reale; viene risolta utilizzando algoritmi di scheduling real-time.
+D) La "sezione critica" è una parte del codice che esegue operazioni di I/O lente; viene risolta utilizzando buffer e cache.
+Qual è il problema del "deadlock" e quali sono le strategie per prevenirlo?
+
+A) Il deadlock è una situazione in cui due o più processi sono bloccati in attesa di risorse che non possono essere liberate; le strategie di prevenzione includono l'allocazione ordinata delle risorse e l'uso di timeout.
+B) Il deadlock è una situazione in cui due o più processi terminano contemporaneamente; le strategie di prevenzione includono la sincronizzazione e la mutua esclusione.
+C) Il deadlock è una situazione in cui un processo non riesce a terminare; le strategie di prevenzione includono l'uso di algoritmi di scheduling round-robin.
+D) Il deadlock è una situazione in cui un processo utilizza eccessivamente le risorse di CPU; le strategie di prevenzione includono l'uso di quote di CPU.
+Quiz 16: Gestione della Memoria
+Qual è la differenza tra memoria virtuale e memoria fisica?
+
+A) La memoria virtuale è la memoria RAM effettiva installata nel computer, mentre la memoria fisica è lo spazio di indirizzamento utilizzato dai programmi.
+B) La memoria virtuale è uno spazio di indirizzamento logico utilizzato dai programmi, mentre la memoria fisica è la memoria RAM effettiva installata nel computer.
+C) La memoria virtuale è utilizzata solo dai driver di sistema, mentre la memoria fisica è utilizzata dalle applicazioni.
+D) La memoria virtuale è uno spazio di indirizzamento utilizzato solo dal sistema operativo, mentre la memoria fisica è utilizzata dai programmi applicativi.
+Come funzionano i "page table" nella gestione della memoria virtuale?
+
+A) I "page table" mappano le pagine di memoria virtuale agli indirizzi fisici della memoria RAM.
+B) I "page table" gestiscono l'allocazione delle risorse di I/O.
+C) I "page table" schedulano l'esecuzione dei processi.
+D) I "page table" sono utilizzati per organizzare i file nel file system.
+Quiz 17: Scheduling dei Processi
+Quale dei seguenti algoritmi di scheduling è più adatto per i sistemi real-time?
+
+A) First-Come, First-Served (FCFS)
+B) Shortest Job Next (SJN)
+C) Round-Robin (RR)
+D) Rate Monotonic Scheduling (RMS)
+Qual è la principale differenza tra scheduling preemptive e non-preemptive?
+
+A) Lo scheduling preemptive non permette l'interruzione di un processo in esecuzione, mentre lo scheduling non-preemptive permette l'interruzione.
+B) Lo scheduling preemptive permette l'interruzione di un processo in esecuzione per dare la CPU a un altro processo, mentre lo scheduling non-preemptive non permette l'interruzione.
+C) Lo scheduling preemptive è utilizzato solo nei sistemi batch, mentre lo scheduling non-preemptive è utilizzato nei sistemi interattivi.
+D) Lo scheduling preemptive è più semplice da implementare rispetto allo scheduling non-preemptive.
+Quiz 18: File System e Gestione dei File
+Qual è il vantaggio principale dell'uso di un file system journaled?
+
+A) Migliore organizzazione dei file
+B) Maggiore velocità di accesso ai file
+C) Maggiore resistenza ai crash di sistema
+D) Maggiore capacità di storage
+In un file system, qual è la funzione principale dei metadata?
+
+A) Memorizzare i dati degli utenti
+B) Gestire la comunicazione tra processi
+C) Fornire informazioni sui file, come permessi, dimensioni e date di modifica
+D) Allocare memoria ai processi
+Quiz 19: Sicurezza e Protezione
+Qual è la differenza tra sicurezza (security) e protezione (protection) in un sistema operativo?
+
+A) La sicurezza si occupa della protezione delle risorse hardware, mentre la protezione si occupa della sicurezza dei dati.
+B) La sicurezza riguarda la difesa contro minacce esterne, mentre la protezione riguarda la gestione dei permessi e dei privilegi all'interno del sistema.
+C) La sicurezza riguarda la protezione dei dati, mentre la protezione riguarda la gestione delle risorse di rete.
+D) La sicurezza si occupa della protezione della memoria, mentre la protezione si occupa della gestione dei file.
+Quale meccanismo viene utilizzato per garantire che un utente o un processo abbia i permessi appropriati per accedere a una risorsa?
+
+A) Controllo di accesso (Access Control)
+B) Scheduling
+C) Swapping
+D) Paging
+Spero che questi quiz avanzati siano utili! Se desideri ulteriori quiz su argomenti specifici o ulteriori domande difficili, fammelo sapere.

@@ -1,0 +1,194 @@
+Quiz 1: Componenti di un sistema di elaborazione
+Quali sono i quattro componenti principali di un sistema di elaborazione?
+
+A) Hardware, Software, Utenti, Rete
+B) Hardware, Sistema Operativo, Programmi Applicativi, Utenti
+C) CPU, Memoria, Disco, Rete
+D) Hardware, Driver, Programmi Applicativi, Utenti
+
+Qual è il ruolo principale del Sistema Operativo in un sistema di elaborazione?
+
+A) Eseguire i programmi applicativi
+B) Gestire l'accesso all'hardware da parte dei programmi
+C) Fornire risorse fisiche come CPU e memoria
+D) Utilizzare i programmi applicativi per compiti specifici
+
+Quiz 2: Architettura di un sistema di elaborazione
+Quali sono i moduli fondamentali della CPU?
+
+A) Arithmetic Logic Unit, Control Unit, Registri
+B) Arithmetic Logic Unit, Memoria, Disco
+C) Control Unit, Registri, Bus
+D) Control Unit, Sistema Operativo, Registri
+
+Come comunica la CPU con i dispositivi di Input/Output?
+
+A) Tramite driver
+B) Tramite la rete
+C) Tramite il bus
+D) Tramite i programmi applicativi
+
+Quiz 3: Definizione di sistema operativo
+Qual è uno dei compiti principali del sistema operativo?
+
+A) Eseguire tutti i programmi
+B) Fornire all'utente un modello di computer più semplice
+C) Salvare tutti i dati degli utenti
+D) Creare hardware per il computer
+
+Con cosa si interfaccia il sistema operativo tramite moduli software chiamati Driver?
+
+A) Applicazioni
+B) Dispositivi hardware
+C) Sistema di rete
+D) Processi utente
+
+Quiz 4: Componenti di un sistema operativo
+Quale componente del sistema operativo crea e gestisce i processi?
+
+A) Gestore della memoria
+B) Gestore dei dischi
+C) Gestore dei processi
+D) Gestore dei dispositivi di I/O
+
+Quale componente del sistema operativo organizza la memoria su disco in una struttura ad albero di directory e file?
+
+A) Gestore dei processi
+B) Gestore della memoria
+C) Gestore dei dischi
+D) Gestore dei dispositivi di I/O
+
+Quiz 5: Definizioni relative ai sistemi operativi
+Quale parte del sistema operativo è sempre in esecuzione e ha privilegi speciali?
+
+A) System Call
+B) Kernel
+C) Shell
+D) Funzioni di libreria
+
+Qual è la modalità della CPU in cui le applicazioni hanno possibilità limitate?
+
+A) Kernel Mode
+B) User Mode
+C) Supervisor Mode
+D) Administrator Mode
+
+Quiz 6: Organizzazione del File System
+Come si chiama la directory radice di tutte le cartelle in Linux?
+
+A) /home
+B) /root
+C) /usr
+D) /
+
+Quale delle seguenti affermazioni è corretta riguardo il Path Relativo?
+
+A) Inizia con / e identifica un percorso a partire dalla Root Directory
+B) Non inizia con / ma con un nome, identificando un percorso relativo alla Working Directory del processo
+C) È utilizzato solo dagli amministratori di sistema
+D) Non può essere utilizzato per accedere a file di sistema
+
+Quiz 7: System Call
+Qual è la funzione delle System Call nei sistemi operativi?
+
+A) Offrire i servizi del SO per creare processi, accedere ai dischi, ecc.
+B) Eseguire compiti comuni a più applicazioni
+C) Calcolare operazioni matematiche
+D) Fornire interfacce grafiche agli utenti
+
+Quale delle seguenti è un esempio di System Call su un sistema operativo POSIX (Linux)?
+
+A) printf
+B) fork
+C) sqrt
+D) LoadKernel
+
+Quiz 8: Kernel e User Mode
+Quali privilegi ha il Kernel Mode nella CPU?
+
+A) Privilegi limitati di accesso alla memoria
+B) Accesso completo all'hardware e a ogni locazione di memoria
+C) Accesso solo alle funzioni di rete
+D) Accesso limitato solo ai dispositivi di I/O
+
+Quale delle seguenti affermazioni è corretta riguardo l'User Mode?
+
+A) Ha accesso completo a tutte le risorse del sistema
+B) Esegue solo il kernel
+C) Le applicazioni hanno possibilità limitate e accedono a uno spazio di indirizzamento limitato
+D) Non è utilizzato nei sistemi moderni
+
+Quiz 9: File System
+Qual è la funzione principale del File System in un sistema operativo?
+
+A) Gestire la memoria della CPU
+B) Organizzare i file e le cartelle in una struttura ad albero
+C) Controllare l'accesso alla rete
+D) Eseguire i processi utente
+
+Come viene identificata la Root Directory in un sistema operativo Linux?
+
+A) \home
+B) \root
+C) \
+D) \usr
+
+Quiz 10: Processi e Thread
+Cos'è un processo in un sistema operativo?
+
+A) Un programma che non è in esecuzione
+B) Un programma in esecuzione con certi privilegi e risorse
+C) Un'unità di memoria
+D) Un driver di sistema
+
+Cos'è un thread in un sistema operativo?
+
+A) Un processo con risorse limitate
+B) Un flusso di esecuzione all'interno di un processo
+C) Un modulo di memoria
+D) Una funzione di libreria
+
+Quiz 11: Tipologie di Kernel
+Quale delle seguenti affermazioni è vera per i Kernel Monolitici?
+
+A) Il kernel è un unico programma che esegue tutto il codice necessario
+B) Delegano alle applicazioni più funzionalità possibile
+C) Sono organizzati in una gerarchia di processi a privilegi crescenti
+D) Non gestiscono direttamente l'hardware
+
+Quale tipologia di kernel cerca di delegare alle applicazioni più funzionalità possibile?
+
+A) Kernel Monolitico
+B) Micro-Kernel
+C) Kernel Ibrido
+D) Kernel Distribuito
+
+Quiz 12: Virtualizzazione
+Qual è il vantaggio della virtualizzazione offerta dal sistema operativo?
+
+A) Consente di eseguire solo applicazioni specifiche
+B) Le macchine virtuali possono avere accesso diretto ad alcune risorse, migliorando le prestazioni
+C) Limita l'accesso alle risorse di rete
+D) Elimina la necessità di driver
+
+Quale componente del sistema operativo supporta la creazione di macchine virtuali o container?
+
+A) Gestore dei processi
+B) Gestore della memoria
+C) Sincronizzazione
+D) Virtualizzazione
+
+Quiz 13: Gestione dei Dispositivi di I/O
+Perché i dispositivi di I/O non sono gestiti direttamente dalle applicazioni?
+
+A) Sarebbe complicato e creerebbe problemi di funzionamento
+B) Non è possibile collegarli direttamente alla CPU
+C) Hanno bisogno di driver specifici per funzionare
+D) Non supportano la comunicazione con il sistema operativo
+
+Come il sistema operativo gestisce i dispositivi di Input/Output?
+
+A) Tramite il kernel
+B) Tramite i driver
+C) Direttamente tramite le applicazioni
+D) Tramite la rete
