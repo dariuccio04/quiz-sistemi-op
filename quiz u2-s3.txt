@@ -1,0 +1,138 @@
+Esercizio 1:
+Si scriva uno script bash che verifica se un dato comando è presente nel sistema utilizzando il comando which.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci il comando da verificare:"
+read comando
+if which $comando > /dev/null 2>&1
+then
+    echo "Il comando $comando è presente nel sistema."
+else
+    echo "Il comando $comando non è presente nel sistema."
+fi
+Esercizio 2:
+Si scriva uno script bash che crea un backup dei file in una directory specificata dall'utente, e lo salvi in un file tar compresso.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci il percorso della directory da eseguire il backup:"
+read directory
+echo "Inserisci il nome del file di backup (senza estensione):"
+read backup_name
+tar -czf ${backup_name}.tar.gz -C $directory .
+echo "Backup completato: ${backup_name}.tar.gz"
+Esercizio 3:
+Si scriva uno script bash che legge una stringa dall'utente e verifica se è un percorso assoluto o relativo.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci un percorso:"
+read percorso
+if [[ $percorso == /* ]]
+then
+    echo "$percorso è un percorso assoluto."
+else
+    echo "$percorso è un percorso relativo."
+fi
+Esercizio 4:
+Si scriva uno script bash che elenca tutti i file eseguibili nella directory corrente.
+
+bash
+Copia codice
+#!/bin/bash
+for file in *
+do
+    if [[ -x $file && -f $file ]]
+    then
+        echo "$file è eseguibile"
+    fi
+done
+Esercizio 5:
+Si scriva uno script bash che legge un numero intero dall'utente e verifica se è pari o dispari.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci un numero intero:"
+read numero
+if (( $numero % 2 == 0 ))
+then
+    echo "$numero è pari."
+else
+    echo "$numero è dispari."
+fi
+Esercizio 6:
+Si scriva uno script bash che verifica se un dato file è conforme allo standard POSIX.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci il percorso del file da verificare:"
+read file
+if file $file | grep -q "POSIX"
+then
+    echo "$file è conforme allo standard POSIX."
+else
+    echo "$file non è conforme allo standard POSIX."
+fi
+Esercizio 7:
+Si scriva uno script bash che legge una stringa dall'utente e conta il numero di caratteri presenti nella stringa.
+
+bash
+Copia codice
+#!/bin/bash
+echo "Inserisci una stringa:"
+read stringa
+lunghezza=${#stringa}
+echo "La stringa contiene $lunghezza caratteri."
+Esercizio 8:
+Si scriva uno script bash che verifica se il sistema operativo è Linux, Unix o Minix.
+
+bash
+Copia codice
+#!/bin/bash
+os=$(uname -s)
+case $os in
+    Linux)
+        echo "Il sistema operativo è Linux."
+        ;;
+    UNIX)
+        echo "Il sistema operativo è UNIX."
+        ;;
+    Minix)
+        echo "Il sistema operativo è Minix."
+        ;;
+    *)
+        echo "Sistema operativo non riconosciuto."
+        ;;
+esac
+Esercizio 9:
+Si scriva uno script bash che elenca tutti i file nella directory corrente che sono stati modificati negli ultimi 7 giorni.
+
+bash
+Copia codice
+#!/bin/bash
+find . -type f -mtime -7 -print
+Esercizio 10:
+Si scriva uno script bash che riceve una directory come argomento e calcola la dimensione totale dei file in quella directory.
+
+bash
+Copia codice
+#!/bin/bash
+if [ "$#" -ne 1 ]
+then
+    echo "Serve un argomento (percorso della directory)"
+else
+    du -sh $1
+fi
+Questi esercizi sono progettati per testare la conoscenza pratica degli studenti su script Bash e concetti legati a Unix, Minix, Linux e POSIX.
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+quiz u4-s3
+
+Che comando utilizzeresti per visualizzare il contenuto di un file chiamato documento.txt?
+
+a) view documento.txt
+b) show documento.txt
+c) cat documento.txt
+d) display documento.txt
+Quale comando permette di visualizzare le prime 10 righe di un file chiamato registro.log?
+
+a) head registro.log
+b) top registro.log
+c) first registro.log
+d) begin registro.log
+Come si crea un nuovo file vuoto chiamato nuovo_file.txt?
+
+a) make nuovo_file.txt
+b) create nuovo_file.txt
+c) touch nuovo_file.txt
+d) new nuovo_file.txt
+Quale comando è utilizzato per copiare un file sorgente.txt in destinazione.txt?
+
+a) move sorgente.txt destinazione.txt
+b) copy sorgente.txt destinazione.txt
+c) cp sorgente.txt destinazione.txt
+d) duplicate sorgente.txt destinazione.txt
+Quale comando è corretto per cambiare i permessi di un file script.sh rendendolo eseguibile da tutti gli utenti?
+
+a) chmod +r script.sh
+b) chmod +w script.sh
+c) chmod +x script.sh
+d) chmod 777 script.sh
+Esercizi sulla gestione dei permessi e dei file in Linux
+Se un file report.txt ha i seguenti permessi: -rw-r--r--, quale affermazione è corretta?
+
+a) Solo il proprietario può leggere e scrivere il file.
+b) Tutti gli utenti possono leggere e scrivere il file.
+c) Solo il gruppo può leggere e scrivere il file.
+d) Nessuno può leggere il file.
+Un utente alice appartiene ai gruppi staff e developers. Un file project.txt ha i seguenti permessi: -rw-rw---- ed è di proprietà dell'utente bob e del gruppo developers. alice può modificare project.txt?
+
+a) Sì, perché fa parte del gruppo developers.
+b) No, perché non è il proprietario del file.
+c) Sì, perché tutti possono modificare il file.
+d) No, perché solo il proprietario può modificare il file.
+Che comando utilizzeresti per cambiare il proprietario di un file dati.csv all'utente john?
+
+a) chown john dati.csv
+b) chmod john dati.csv
+c) chgrp john dati.csv
+d) changeowner john dati.csv
+Quale comando mostra il contenuto di una directory in modo dettagliato, inclusi i permessi dei file?
+
+a) ls
+b) ls -l
+c) dir
+d) show
+Quale dei seguenti comandi rimuove un file chiamato vecchio.txt?
+
+a) delete vecchio.txt
+b) rm vecchio.txt
+c) remove vecchio.txt
+d) erase vecchio.txt
+Esercizi sulle funzioni di libreria e system call
+Quale delle seguenti è una funzione di libreria per l'apertura di file?
+
+a) open
+b) fopen
+c) read
+d) write
+Dopo l'esecuzione del seguente codice, dove si trova il cursore nel file log.txt contenente il testo errore di sistema?
+
+c
+Copia codice
+FILE * fp = fopen("log.txt", "r");
+fscanf(fp, "%s", buffer);
+fseek(fp, 4, SEEK_CUR);
+a) errore↓di sistema
+b) erro↓re di sistema
+c) errore di sistema↓
+d) errore di↓ sistema
+Quale comando è utilizzato per scrivere un testo su un file in C?
+
+a) fprintf
+b) fwrite
+c) fprint
+d) writefile
+Qual è la relazione tra le funzioni fprintf e write?
+
+a) fprintf è una funzione di libreria e usa la system call write.
+b) write è una funzione di libreria e usa la system call fprintf.
+c) fprintf e write sono entrambe funzioni di libreria.
+d) fprintf e write sono entrambe system call.
+Quale dei seguenti comandi stampa a schermo il contenuto di un file output.txt?
+
+a) echo output.txt
+b) print output.txt
+c) cat output.txt
+d) view output.txt

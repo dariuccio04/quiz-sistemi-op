@@ -1,0 +1,402 @@
+Esercizio 1: Trova file specifici in una directory
+Scrivi un programma che cerca ricorsivamente tutti i file con estensione .txt in una directory specificata dall'utente e salva l'elenco dei percorsi di questi file in un file di output.
+
+bash
+Copia codice
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <directory> <output_file>"
+    exit 1
+fi
+
+directory=$1
+output_file=$2
+
+find "$directory" -type f -name "*.txt" > "$output_file"
+Esercizio 2: Contare parole in file multipli
+Scrivi uno script che conta il numero totale di parole in tutti i file con estensione .log in una directory specificata dall'utente.
+
+bash
+Copia codice
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+directory=$1
+total_words=0
+
+for file in "$directory"/*.log; do
+    if [ -f "$file" ]; then
+        words=$(wc -w < "$file")
+        total_words=$((total_words + words))
+    fi
+done
+
+echo "Total words in .log files: $total_words"
+Esercizio 3: Verifica dei permessi dei file
+Scrivi uno script che prende una directory come argomento e verifica i permessi di lettura, scrittura ed esecuzione per tutti i file presenti in essa. Lo script dovrebbe stampare un messaggio per ogni file indicando quali permessi sono concessi.
+
+bash
+Copia codice
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+directory=$1
+
+for file in "$directory"/*; do
+    if [ -f "$file" ]; then
+        echo -n "$file: "
+        [ -r "$file" ] && echo -n "read " || echo -n "no read "
+        [ -w "$file" ] && echo -n "write " || echo -n "no write "
+        [ -x "$file" ] && echo -n "execute " || echo -n "no execute "
+        echo
+    fi
+done
+Esercizio 4: Ricerca e sostituzione di testo
+Scrivi uno script che prende una directory, una stringa di ricerca e una stringa di sostituzione come argomenti. Lo script deve cercare ricorsivamente la stringa di ricerca in tutti i file di testo nella directory e sostituirla con la stringa di sostituzione.
+
+bash
+Copia codice
+#!/bin/bash
+
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <directory> <search_string> <replace_string>"
+    exit 1
+fi
+
+directory=$1
+search_string=$2
+replace_string=$3
+
+for file in $(find "$directory" -type f -name "*.txt"); do
+    sed -i "s/$search_string/$replace_string/g" "$file"
+done
+Esercizio 5: Organizzazione dei file per estensione
+Scrivi uno script che prende una directory come argomento e organizza i file presenti in essa in sottodirectory basate sulla loro estensione.
+
+bash
+Copia codice
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+directory=$1
+
+for file in "$directory"/*; do
+    if [ -f "$file" ]; then
+        extension="${file##*.}"
+        mkdir -p "$directory/$extension"
+        mv "$file" "$directory/$extension/"
+    fi
+done
+
+
+Esercizio 1: Trova il kernel più recente
+Dato il file kernels.txt contenente informazioni sul nome del kernel, la versione e l'anno di rilascio:
+
+yaml
+Copia codice
+linux 5.10 2020
+minix 3.4 2017
+unix v7 1979
+linux 4.15 2018
+minix 3.3 2015
+unix v6 1975
+Si trovi il nome e la versione del kernel più recente:
+
+bash
+Copia codice
+sort -k3 -r < kernels.txt | head -1 | cut -d" " -f 1-2
+Esercizio 2: Elenca i sistemi operativi rilasciati dopo il 2015
+Dato il file os_releases.txt contenente informazioni sui sistemi operativi e l'anno di rilascio:
+
+yaml
+Copia codice
+linux 2018
+minix 2017
+unix 1979
+linux 2020
+minix 2015
+unix 1975
+Si trovino i nomi dei sistemi operativi rilasciati dopo il 2015:
+
+bash
+Copia codice
+cat os_releases.txt | awk '$2 > 2015' | cut -d" " -f 1 | sort | uniq
+Esercizio 3: Trova il sistema operativo più vecchio
+Dato il file os_history.txt contenente informazioni sui sistemi operativi e l'anno di rilascio:
+
+yaml
+Copia codice
+linux 1991
+minix 1987
+unix 1969
+linux 1992
+minix 1986
+unix 1973
+Si trovi il nome e l'anno del sistema operativo più vecchio:
+
+bash
+Copia codice
+sort -k2 < os_history.txt | head -1 | cut -d" " -f 1-2
+Esercizio 4: Elenca le versioni di Linux
+Dato il file linux_versions.txt contenente informazioni sulle versioni di Linux:
+
+Copia codice
+linux 2.6
+linux 3.10
+linux 4.4
+linux 5.10
+linux 4.15
+linux 3.2
+Si trovino i nomi delle versioni di Linux in ordine crescente:
+
+bash
+Copia codice
+cat linux_versions.txt | cut -d" " -f 2 | sort -n
+Esercizio 5: Trova i sistemi operativi rilasciati negli anni '80
+Dato il file os_releases.txt contenente informazioni sui sistemi operativi e l'anno di rilascio:
+
+yaml
+Copia codice
+linux 1991
+minix 1987
+unix 1980
+linux 1992
+minix 1986
+unix 1983
+Si trovino i nomi dei sistemi operativi rilasciati negli anni '80:
+
+bash
+Copia codice
+cat os_releases.txt | awk '$2 ~ /^198/' | cut -d" " -f 1 | sort | uniq
+Esercizio 6: Elenca i sistemi operativi conformi a POSIX
+Dato il file posix_os.txt contenente informazioni sui sistemi operativi e la loro conformità a POSIX (sì o no):
+
+perl
+Copia codice
+linux si
+minix si
+unix si
+windows no
+macos si
+dos no
+Si trovino i nomi dei sistemi operativi conformi a POSIX:
+
+bash
+Copia codice
+cat posix_os.txt | grep "si" | cut -d" " -f 1 | sort | uniq
+Esercizio 7: Trova i sistemi operativi non conformi a POSIX
+Dato il file posix_os.txt contenente informazioni sui sistemi operativi e la loro conformità a POSIX (sì o no):
+
+perl
+Copia codice
+linux si
+minix si
+unix si
+windows no
+macos si
+dos no
+Si trovino i nomi dei sistemi operativi non conformi a POSIX:
+
+bash
+Copia codice
+cat posix_os.txt | grep "no" | cut -d" " -f 1 | sort | uniq
+Esercizio 8: Elenca le versioni di Unix in ordine decrescente
+Dato il file unix_versions.txt contenente informazioni sulle versioni di Unix:
+
+Copia codice
+unix v1
+unix v5
+unix v7
+unix v6
+unix v2
+unix v3
+Si trovino i nomi delle versioni di Unix in ordine decrescente:
+
+bash
+Copia codice
+cat unix_versions.txt | cut -d" " -f 2 | sort -r
+Esercizio 9: Trova il sistema operativo rilasciato più di recente
+Dato il file os_releases.txt contenente informazioni sui sistemi operativi e l'anno di rilascio:
+
+yaml
+Copia codice
+linux 2020
+minix 2017
+unix 1980
+linux 2018
+minix 2015
+unix 1975
+Si trovi il nome e l'anno del sistema operativo rilasciato più di recente:
+
+bash
+Copia codice
+sort -k2 -r < os_releases.txt | head -1 | cut -d" " -f 1-2
+Esercizio 10: Elenca le versioni di Minix in ordine crescente
+Dato il file minix_versions.txt contenente informazioni sulle versioni di Minix:
+
+Copia codice
+minix 3.1
+minix 2.0
+minix 3.3
+minix 3.2
+minix 2.1
+minix 3.0
+Si trovino i nomi delle versioni di Minix in ordine crescente:
+
+bash
+Copia codice
+cat minix_versions.txt | cut -d" " -f 2 | sort -n
+Questi esercizi seguono lo stesso formato degli esempi forniti e permettono di praticare l'uso dei comandi Unix e delle pipe per manipolare e analizzare i dati contenuti nei file di testo.
+
+
+
+
+
+
+Quiz 1: Trova una parola specifica e il suo conteggio
+Dato il file words.txt contenente un elenco di parole, trova quante volte appare la parola "apple".
+
+txt
+Copia codice
+apple
+banana
+apple
+orange
+banana
+apple
+grape
+Quale comando bash troverà quante volte appare la parola "apple"?
+
+ grep "apple" words.txt
+ grep "apple" words.txt | wc -l
+ sort words.txt | grep "apple"
+ uniq -c words.txt | grep "apple"
+Risposta corretta: grep "apple" words.txt | wc -l
+
+Quiz 2: Elenca parole uniche
+Dato il file words.txt, elenca tutte le parole uniche in ordine alfabetico.
+
+txt
+Copia codice
+apple
+banana
+apple
+orange
+banana
+apple
+grape
+Quale comando bash elencherà tutte le parole uniche in ordine alfabetico?
+
+ sort words.txt | uniq
+ uniq words.txt | sort
+ grep -u words.txt | sort
+ sort -u words.txt
+Risposta corretta: sort words.txt | uniq
+
+Quiz 3: Trova la parola più frequente
+Dato il file words.txt, trova la parola che appare più frequentemente.
+
+txt
+Copia codice
+apple
+banana
+apple
+orange
+banana
+apple
+grape
+Quale comando bash troverà la parola che appare più frequentemente?
+
+ sort words.txt | uniq -c | sort -nr | head -1
+ uniq -c words.txt | sort -nr | head -1
+ grep -c words.txt | sort -nr | head -1
+ sort words.txt | grep -c | sort -nr | head -1
+Risposta corretta: sort words.txt | uniq -c | sort -nr | head -1
+
+Quiz 4: Elenca parole duplicate
+Dato il file words.txt, elenca tutte le parole che appaiono più di una volta.
+
+txt
+Copia codice
+apple
+banana
+apple
+orange
+banana
+apple
+grape
+Quale comando bash elencherà tutte le parole che appaiono più di una volta?
+
+ sort words.txt | uniq -d
+ uniq -d words.txt
+ grep -d words.txt | sort
+ sort -d words.txt
+Risposta corretta: sort words.txt | uniq -d
+
+Quiz 5: Conta il numero di parole uniche
+Dato il file words.txt, conta il numero di parole uniche.
+
+txt
+Copia codice
+apple
+banana
+apple
+orange
+banana
+apple
+grape
+Quale comando bash conterà il numero di parole uniche?
+
+ sort words.txt | uniq | wc -l
+ uniq -u words.txt | wc -l
+ sort -u words.txt | wc -l
+ grep -u words.txt | wc -l
+Risposta corretta: sort words.txt | uniq | wc -l
+
+Quiz 6: Trova le linee che contengono una parola specifica
+Dato il file phrases.txt contenente frasi, trova tutte le linee che contengono la parola "apple".
+
+txt
+Copia codice
+I like apple pie.
+Bananas are great.
+Apple juice is my favorite.
+Orange juice is healthy.
+Grapes are tasty.
+Quale comando bash troverà tutte le linee che contengono la parola "apple"?
+
+ grep "apple" phrases.txt
+ grep -i "apple" phrases.txt
+ grep "apple" phrases.txt | wc -l
+ grep -w "apple" phrases.txt
+Risposta corretta: grep -i "apple" phrases.txt
+
+Quiz 7: Trova la parola più costosa
+Dato il file products.txt contenente il nome del prodotto, l'anno, la città e il prezzo, trova il nome e l'anno del prodotto più costoso.
+
+txt
+Copia codice
+laptop 2020 newyork 1000
+phone 2018 sanfrancisco 800
+tablet 2019 losangeles 600
+monitor 2021 seattle 200
+Quale comando bash troverà il nome e l'anno del prodotto più costoso?
+
+ sort -k4 -n < products.txt | head -1 | cut -d" " -f 1-2
+ sort -k4 -r < products.txt | head -1 | cut -d" " -f 1-2
+ sort -k4 -r < products.txt | tail -1 | cut -d" " -f 1-2
+ sort -k4 < products.txt | head -1 | cut -d" " -f 1-2
+Risposta corretta: sort -k4 -r < products.txt | head -1 | cut -d" " -f 1-2

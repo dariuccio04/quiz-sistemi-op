@@ -1,0 +1,100 @@
+quiz u4-s1
+
+Il disco nei sistemi di elaborazione:
+Quali sono le principali tecnologie per la costruzione dei dischi?
+
+Nastri magnetici, dischi magnetici, stato solido (memorie flash)
+Qual è la differenza principale tra dischi magnetici e memorie flash?
+
+Nei dischi magnetici, la testina si sposta e l'accesso non ha un tempo costante. Le memorie flash hanno un tempo di accesso quasi costante e la scrittura è più lenta della lettura.
+I File:
+Quali sono le principali operazioni che possono essere eseguite sui file tramite System Call?
+
+Creazione, lettura, scrittura, cancellazione, seek (movimento del cursore)
+Quali attributi possono avere i file?
+
+Identificativo nel SO, permessi, tempo di creazione, di ultimo accesso
+I Direttori:
+Qual è la differenza principale tra file e direttori?
+
+I file contengono byte, mentre i direttori non contengono byte ma altri file o direttori.
+Quali operazioni possono essere eseguite sui direttori?
+
+Creazione, rimozione, listing, renaming
+Allocazione dei blocchi:
+Quali sono i vantaggi e gli svantaggi dell'allocazione contigua?
+
+Vantaggi: semplice e veloce, pochi metadati necessari. Svantaggi: frammentazione esterna.
+In cosa consiste l'allocazione concatenata e quali sono i suoi vantaggi?
+
+Ogni file è una linked list di blocchi. Vantaggi: no frammentazione esterna, tutti i blocchi sono usabili per ogni file.
+File system comuni:
+Quali file system sono tipicamente utilizzati nei sistemi operativi Unix e Linux?
+
+Unix: UFS, FFS. Linux: ext3, ext4
+Quali file system utilizza Windows?
+
+FAT, FAT32, NTFS
+
+Il disco nei sistemi di elaborazione:
+La memoria flash ha un tempo di accesso:
+Costante
+Variabile
+Lento
+Veloce
+I file:
+Un file contiene:
+
+Solo testo
+Una sequenza ordinata di bit
+Solo immagini
+Solo audio
+Quale di queste operazioni non può essere eseguita su un file?
+
+Creazione
+Lettura
+Formattazione
+Seek
+I direttori:
+Un direttorio può contenere:
+
+Solo file
+Solo altri direttori
+File e altri direttori
+Solo immagini
+I link a direttori possono generare cicli:
+
+Vero
+Falso
+Allocazione dei blocchi:
+In un sistema con blocchi di 4KB, un file di 6000 byte occuperà quanti blocchi?
+
+1
+2
+3
+4
+L'allocazione contigua soffre di:
+
+Frammentazione interna
+Frammentazione esterna
+Nessuna frammentazione
+Frammentazione dei file
+File system comuni:
+Quale file system è comunemente utilizzato nei sistemi operativi Windows?
+
+UFS
+ext4
+NTFS
+HFS+
+Il file system ext4 è utilizzato principalmente in:
+
+Windows
+MacOS
+Linux
+Unix
+Tabelle delle partizioni:
+Quale di questi metodi di partizionamento supporta dischi più grandi di 2TB?
+MBR
+GUID Partition Table (GPT)
+FAT32
+NTFS
