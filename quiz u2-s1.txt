@@ -1,0 +1,152 @@
+Quiz 1:
+Ubuntu deriva dalla distribuzione:
+
+ Arch Linux
+ Red Hat
+ Debian
+Quiz 2:
+Quale delle seguenti distribuzioni è mantenuta da Red Hat e offre supporto a pagamento?
+
+ Fedora
+ CentOS
+ Red Hat Enterprise Linux
+Quiz 3:
+Qual è la filosofia alla base di Arch Linux?
+
+ "Keep It Secure and Stable"
+ "Keep It Simple, Stupid"
+ "Keep It User-Friendly"
+Quiz 4:
+Quale strumento è consigliato per creare una macchina virtuale per Linux?
+
+ Cygwin
+ VirtualBox
+ Rufus
+Quiz 5:
+Quale delle seguenti opzioni permette di utilizzare Linux senza installarlo su disco?
+
+ Dual Boot
+ Macchina Virtuale
+ Linux da USB "Live"
+Quiz 6:
+Qual è la versione consumer di Red Hat Enterprise Linux?
+
+ Ubuntu
+ CentOS
+ openSUSE
+Quiz 7:
+Quale metodo di utilizzo di Linux è descritto come non persistente, limitato a pochi minuti e adatto per provare comandi al volo?
+
+ Cygwin
+ Windows Subsystem for Linux (WSL)
+ Terminale via browser
+Quiz 8:
+Quale distribuzione di Linux è conosciuta per essere basata su Ubuntu e famosa nei primi anni 2010?
+
+ Linux Mint
+ openSUSE
+ Fedora
+Quiz 9:
+Quale metodo per usare Linux richiede la partizione dell'hard disk del PC?
+
+ Macchina Virtuale
+ Dual Boot
+ Terminale via browser
+Quiz 10:
+Quale dei seguenti è un layer di compatibilità POSIX per Windows?
+
+ VirtualBox
+ Rufus
+ Cygwin
+
+
+Quiz 1:
+UNIX è:
+
+ Un linguaggio di programmazione
+ Un sistema operativo
+ Un tipo di hardware
+Quiz 2:
+Minix è:
+
+ Una variante di Linux
+ Un clone di UNIX creato per scopi didattici
+ Un ambiente di sviluppo integrato
+Quiz 3:
+Linux è stato creato da:
+
+ Richard Stallman
+ Ken Thompson
+ Linus Torvalds
+Quiz 4:
+Quale tra questi è un esempio di un sistema operativo conforme a POSIX?
+
+ Windows
+ Linux
+ DOS
+Quiz 5:
+POSIX è:
+
+ Un'estensione di Unix
+ Un insieme di standard per la compatibilità dei sistemi operativi
+ Un tipo di filesystem
+Quiz 6:
+La principale differenza tra Minix e Linux è:
+
+ Minix è basato su microkernel, mentre Linux è basato su monolitic kernel
+ Minix è gratuito, mentre Linux è a pagamento
+ Minix è per server, mentre Linux è per desktop
+Quiz 7:
+Il kernel di Linux è stato derivato da:
+
+ UNIX System V
+ BSD UNIX
+ Nessuno di questi
+Quiz 8:
+Un sistema operativo conforme a POSIX deve:
+
+ Essere open source
+ Supportare le chiamate di sistema definite da POSIX
+ Avere un'interfaccia grafica
+Quiz 9:
+Chi ha sviluppato Minix?
+
+ Linus Torvalds
+ Andrew S. Tanenbaum
+ Dennis Ritchie
+Quiz 10:
+Quale di questi sistemi operativi non è derivato da UNIX?
+
+ AIX
+ VMS
+ Solaris
+Quiz 11:
+Quale di queste caratteristiche è tipica dei sistemi operativi POSIX?
+
+ Assenza di multitasking
+ Compatibilità tra programmi scritti per sistemi diversi
+ Interfaccia utente grafica predefinita
+Quiz 12:
+La licenza del kernel di Linux è:
+
+ BSD License
+ MIT License
+ GNU General Public License
+Quiz 13:
+Quale delle seguenti affermazioni è vera riguardo UNIX?
+
+ È stato originariamente sviluppato negli anni '80
+ È un sistema operativo proprietario sviluppato da Microsoft
+ È noto per la sua stabilità e sicurezza
+Quiz 14:
+Cosa significa che Linux è un sistema operativo "UNIX-like"?
+
+ Che è basato direttamente sul codice di UNIX
+ Che imita il design e le funzionalità di UNIX, ma è stato scritto da zero
+ Che può eseguire programmi UNIX senza modifiche
+Quiz 15:
+Il comando per visualizzare i file in una directory in un sistema POSIX è:
+
+ dir
+ list
+ ls
