@@ -1,0 +1,59 @@
+quiz u4-s5
+
+Un sistema di dischi basato su RAID è sempre più affidabile di un disco singolo?
+
+A) Sì
+B) No
+In un sistema RAID 0, quali sono le conseguenze in caso di fallimento di un disco?
+
+A) I dati vengono persi
+B) È possibile recuperare i dati
+In un sistema RAID 1, quali sono le conseguenze in caso di fallimento di un disco?
+
+A) I dati vengono persi
+B) È possibile recuperare i dati
+È possibile creare un sistema RAID 6 con 3 dischi?
+
+A) Sì
+B) No
+Qual è il sistema di accesso tipico a un FS Distribuito?
+
+A) Bus PCI
+B) Rete
+C) USB
+Quale livello di RAID offre la massima velocità ma la minima affidabilità?
+
+A) RAID 0
+B) RAID 1
+C) RAID 5
+D) RAID 6
+Quale livello di RAID utilizza un disco dedicato per la parità?
+
+A) RAID 0
+B) RAID 1
+C) RAID 4
+D) RAID 5
+Quale livello di RAID resiste a due guasti simultanei?
+
+A) RAID 0
+B) RAID 1
+C) RAID 5
+D) RAID 6
+Risposte corrette
+B) No
+A) I dati vengono persi
+B) È possibile recuperare i dati
+B) No
+B) Rete
+A) RAID 0
+C) RAID 4
+D) RAID 6
+Spiegazioni
+RAID e affidabilità: Non tutti i livelli RAID offrono la stessa affidabilità, ad esempio RAID 0 non offre alcuna tolleranza ai guasti.
+RAID 0: Utilizza striping senza parità o mirroring, quindi la perdita di un disco causa la perdita totale dei dati.
+RAID 1: Utilizza mirroring, quindi i dati sono duplicati su più dischi, permettendo il recupero in caso di guasto di un disco.
+RAID 6: Richiede almeno 4 dischi per implementare la doppia parità distribuita.
+Accesso FS Distribuito: Tipicamente avviene attraverso la rete, utilizzando protocolli come NFS o Samba.
+RAID 0: Offre alta velocità grazie all'accesso parallelo ai dischi, ma nessuna tolleranza ai guasti.
+RAID 4: Utilizza un disco dedicato per memorizzare la parità dei dati sugli altri dischi.
+RAID 6: Utilizza doppia parità distribuita, permettendo di resistere a due guasti simultanei.

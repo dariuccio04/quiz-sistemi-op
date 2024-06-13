@@ -1,0 +1,65 @@
+quiz u5-s1
+
+Cos'è un processo?
+
+A) Una componente del sistema operativo
+B) Il codice eseguibile di un programma
+C) Un programma in esecuzione
+D) Una variabile globale
+Come sono identificati i processi nel sistema operativo?
+
+A) Un nome
+B) Un ID numerico
+C) Non hanno identificativi
+D) Un percorso di file
+Quale tra i seguenti stati non è uno stato di un processo?
+
+A) Nuovo
+B) Pronto
+C) Esecuzione
+D) Bloccato
+E) In attesa
+Quale componente del sistema operativo gestisce l'esecuzione dei processi?
+
+A) File System
+B) Scheduler
+C) Gestore di memoria
+D) Gestore di I/O
+Quale struttura di dati contiene le informazioni di un processo?
+
+A) Page Table
+B) File Descriptor
+C) Process Control Block (PCB)
+D) Inode
+Domande vero/falso
+Un processo può creare un altro processo usando le system call.
+
+A) Vero
+B) Falso
+Nel modello di albero dei processi, se il processo padre termina, i figli vengono automaticamente terminati.
+
+A) Vero
+B) Falso
+Il Context Switching deve essere eseguito il più rapidamente possibile poiché è tempo sprecato.
+
+A) Vero
+B) Falso
+Il Round Robin è un algoritmo di scheduling che assegna la CPU ai processi a turno per un tempo fissato.
+
+A) Vero
+B) Falso
+Nel Priority Scheduling, un processo a bassa priorità potrebbe non venire mai eseguito.
+
+A) Vero
+B) Falso
+Risposte corrette
+C) Un programma in esecuzione
+B) Un ID numerico
+D) Bloccato
+B) Scheduler
+C) Process Control Block (PCB)
+A) Vero
+B) Falso
+A) Vero
+A) Vero
+A) Vero

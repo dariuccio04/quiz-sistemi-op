@@ -1,0 +1,111 @@
+quiz u4-s4
+
+È possibile creare link a cartelle?
+
+A) Di tipo Hard Link
+B) Di tipo Soft Link
+C) Sempre
+D) Mai
+Un Hard Link può riferirsi a un file inesistente?
+
+A) Vero
+B) Falso
+Un Soft Link può riferirsi a un file inesistente?
+
+A) Vero
+B) Falso
+Quale System Call permette di conoscere lo user ID del proprietario di una directory?
+
+A) open
+B) opendir
+C) readdir
+D) stat
+La directory dir contiene i file f.txt e g.txt. Il seguente codice:
+
+c
+Copia codice
+dp = opendir("dir1");
+while ((dirp = readdir(dp)) != NULL){
+    if (strcmp(dirp->d_name, "dir/f.txt") == 0 )
+        printf("%s\n", "Found");
+}
+Stampa:
+
+A) "Found" una volta
+B) "Found" due volte
+C) Niente
+Risposte corrette
+B) Di tipo Soft Link
+B) Falso
+A) Vero
+D) stat
+C) Niente
+Spiegazioni
+Soft Link: È possibile creare Soft Link a cartelle, ma non Hard Link.
+Hard Link: Un Hard Link deve riferirsi a un inode esistente.
+Soft Link: Un Soft Link può esistere anche se il file target non esiste più, diventando invalido fino a quando non viene creato nuovamente un file con lo stesso nome.
+System Call: La system call stat fornisce informazioni complete su file e directory, inclusi gli ID di proprietario.
+Codice: Il codice cerca dir/f.txt nella directory dir1, ma non troverà mai questo file perché dir/f.txt è un percorso relativo non valido all'interno di dir1.
+
+Quale comando Bash crea un Hard Link?
+
+A) ln -s
+B) ln
+C) link
+D) unlink
+Quale macro si utilizza per verificare se un file è un file regolare nella struct stat?
+
+A) S_ISDIR
+B) S_ISLNK
+C) S_ISREG
+D) S_IFREG
+Cosa succede se cancelliamo un Soft Link?
+
+A) Il file originale viene cancellato.
+B) Il Soft Link viene rimosso, ma il file originale rimane.
+C) Il file originale diventa invalido.
+D) Nulla, poiché un Soft Link non può essere cancellato.
+Quale comando Bash stampa l'albero di file e cartelle contenuti in una directory?
+
+A) ls
+B) find
+C) tree
+D) du
+Qual è la funzione di libreria POSIX per aprire una directory?
+
+A) open
+B) opendir
+C) readdir
+D) closedir
+Domande vero/falso
+Un Hard Link e il file originale condividono lo stesso inode.
+
+A) Vero
+B) Falso
+Il comando Bash stat può essere utilizzato per ottenere informazioni dettagliate su un file o una directory.
+
+A) Vero
+B) Falso
+Le funzioni di libreria POSIX opendir, readdir e closedir funzionano anche su Windows.
+
+A) Vero
+B) Falso
+Per rimuovere un file o un link in Linux si utilizza la system call unlink.
+
+A) Vero
+B) Falso
+La system call mkdir crea una nuova directory.
+
+A) Vero
+B) Falso
+Risposte corrette
+B) ln
+C) S_ISREG
+B) Il Soft Link viene rimosso, ma il file originale rimane.
+C) tree
+B) opendir
+A) Vero
+A) Vero
+B) Falso
+A) Vero
+A) Vero
