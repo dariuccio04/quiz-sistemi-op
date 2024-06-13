@@ -4,39 +4,48 @@ Charles Babbage
 Ken Thompson
 Dennis Ritchie
 Bill Gates
+
 Qual è stato il primo tipo di elaboratore?
 Elaboratore a valvole
 Elaboratore a transistor
 Elaboratore a circuito integrato
+
 Qual è stato il sistema operativo introdotto da IBM per i mainframe?
 OS/360
 MULTICS
 MS-DOS
+
 Chi è stato il fondatore di Microsoft?
 Bill Gates
 Steve Jobs
 Steve Wozniak
+
 Qual è stato il sistema operativo introdotto da Apple per i personal computer?
 Mac OS
 Windows
 MS-DOS
+
 Quiz 2: Tipologie di Sistemi Operativi
 Qual è il tipo di sistema operativo per mainframe?
 SO per PC
 SO per server
 SO per mainframe
+
 Qual è il tipo di sistema operativo per dispositivi con risorse molto limitate?
 SO integrati
 SO per sensori
 SO real time
+
 Qual è il tipo di sistema operativo per applicazioni particolari dove il tempo è fondamentale?
 SO real time
 SO per smartcard
 SO per sensori
+
 Qual è il tipo di sistema operativo per dispositivi con interfaccia grafica e input touch?
 SO per PC
 SO per server
 SO per smartphone o tablet
+
 Qual è il tipo di sistema operativo per dispositivi con requisiti di basso consumo e sicurezza?
 SO per smartcard
 SO per sensori
@@ -59,46 +68,55 @@ a) OS/360 di IBM
 b) MULTICS
 c) Unix
 d) MS-DOS
+
 Quale sistema operativo, sviluppato negli anni '70, è considerato l'antenato diretto di Linux?
 a) MINIX
 b) MULTICS
 c) Unix
 d) OS/360
+
 Quale società ha sviluppato il primo sistema operativo con interfaccia grafica a finestre, diventato poi un modello per Windows?
 a) Apple
 b) Microsoft
 c) IBM
 d) Bell Labs
+
 Quale sistema operativo, nato per computer Macintosh, è basato sull'architettura Unix e ha introdotto il multitasking preemptivo e la memoria protetta?
 a) Mac OS
 b) Mac OS X
 c) Windows NT
 d) Linux
+
 Quale sistema operativo, sviluppato da Andrew Tanenbaum, è stato progettato come clone di Unix per scopi didattici?
 a) MINIX
 b) MULTICS
 c) Unix
 d) Linux
+
 Quale sistema operativo, nato nel 1991 da Linus Torvalds, è diventato il kernel alla base di quasi tutte le distribuzioni GNU/Linux?
 a) MINIX
 b) Unix
 c) Linux
 d) GNU
+
 Quale standard, sviluppato nel 1988, definisce le specifiche per i sistemi operativi Unix-like?
 a) ISO C
 b) POSIX
 c) ANSI
 d) IEEE
+
 Quale sistema operativo, sviluppato da Microsoft, è stato inizialmente pensato per computer IBM con CPU Intel della famiglia 8086?
 a) MS-DOS
 b) Windows 1.0
 c) Windows 3.1
 d) Windows 9x
+
 Quale società, fondata nel 1975 da Bill Gates e Paul Allen, ha commercializzato il sistema operativo MS-DOS nel 1981 e Windows nel 1985?
 a) Apple
 b) IBM
 c) Microsoft
 d) Bell Labs
+
 Quale sistema operativo, nato come progetto personale di Ken Thompson e Dennis Ritchie nei Bell Labs, ha dato origine a tutta la famiglia Linux?
 a) MULTICS
 b) Unix
