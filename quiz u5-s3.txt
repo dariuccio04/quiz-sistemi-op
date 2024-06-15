@@ -1,0 +1,136 @@
+Qual è lo scopo della system call fork() in Unix?
+
+a) Terminare un processo
+b) Creare un nuovo processo duplicando il processo chiamante
+c) Sincronizzare due processi
+d) Inviare un segnale a un processo
+Risposta: b) Creare un nuovo processo duplicando il processo chiamante
+
+Cosa rappresenta il valore di ritorno di fork() nei processi padre e figlio?
+
+a) 0 nel padre, PID del figlio nel figlio
+b) PID del figlio nel padre, 0 nel figlio
+c) -1 nel padre, PID del padre nel figlio
+d) 1 nel padre, -1 nel figlio
+Risposta: b) PID del figlio nel padre, 0 nel figlio
+
+Quali sono i principali stati di un processo in un sistema operativo?
+
+a) Nuovo, Pronto, In esecuzione, In attesa, Terminato
+b) Nuovo, Pronto, In esecuzione, Bloccato, Terminato
+c) Nuovo, Pronto, In esecuzione, Sospeso, Terminato
+d) Nuovo, Pronto, In esecuzione, In attesa, Sospeso
+Risposta: a) Nuovo, Pronto, In esecuzione, In attesa, Terminato
+
+Che cos'è un "zombie process"?
+
+a) Un processo che non può essere terminato
+b) Un processo che è terminato ma il cui stato non è stato ancora raccolto dal processo padre
+c) Un processo che è bloccato in attesa di una risorsa
+d) Un processo che è in esecuzione continua senza interruzioni
+Risposta: b) Un processo che è terminato ma il cui stato non è stato ancora raccolto dal processo padre
+
+U5-S3-Segnalazioni
+Cosa sono i segnali in un sistema operativo?
+
+a) Comunicazioni sincrone tra processi
+b) Comunicazioni asincrone tra processi o tra kernel e processi
+c) Routine di gestione delle risorse
+d) Meccanismi di memoria virtuale
+Risposta: b) Comunicazioni asincrone tra processi o tra kernel e processi
+
+Qual è l'uso della system call kill?
+
+a) Creare un nuovo processo
+b) Terminare immediatamente un processo
+c) Inviare un segnale a un processo o a un gruppo di processi
+d) Sincronizzare due processi
+Risposta: c) Inviare un segnale a un processo o a un gruppo di processi
+
+Quale dei seguenti segnali termina di default il processo?
+
+a) SIGCHLD
+b) SIGKILL
+c) SIGUSR1
+d) SIGALRM
+Risposta: b) SIGKILL
+
+Quale system call permette di sospendere un processo fino all'arrivo di un segnale?
+
+a) alarm
+b) sigaction
+c) pause
+d) raise
+Risposta: c) pause
+
+Qual è la differenza tra SIGKILL e SIGTERM?
+
+a) SIGKILL non può essere ignorato o catturato, SIGTERM può essere gestito
+b) SIGKILL può essere gestito, SIGTERM non può essere ignorato
+c) SIGKILL è utilizzato solo dal kernel, SIGTERM solo dagli utenti
+d) SIGKILL termina un processo figlio, SIGTERM un processo padre
+Risposta: a) SIGKILL non può essere ignorato o catturato, SIGTERM può essere gestito
+
+Esercizi pratici
+Scrivi un programma in C che genera un processo figlio. Il padre manda al figlio un segnale SIGUSR1 ogni secondo. Il figlio stampa l'avvenuta ricezione.
+
+c
+Copia codice
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+
+void handler(int signum) {
+    printf("Ricevuto SIGUSR1\n");
+}
+
+int main() {
+    pid_t pid;
+    struct sigaction action;
+
+    pid = fork();
+    if (pid != 0) { // Padre
+        while (1) {
+            sleep(1);
+            kill(pid, SIGUSR1);
+        }
+    } else { // Figlio
+        action.sa_handler = handler;
+        sigemptyset(&action.sa_mask);
+        action.sa_flags = 0;
+        sigaction(SIGUSR1, &action, NULL);
+        while (1);
+    }
+    return 0;
+}
+Scrivi un programma in C che memorizza quanti SIGTERM ha ricevuto. Alla pressione di CTRL+C stampa tale numero e termina.
+
+c
+Copia codice
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+int count = 0;
+
+void handler(int signum) {
+    if (signum == SIGTERM) {
+        count++;
+    } else if (signum == SIGINT) {
+        printf("Ricevuti %d SIGTERM\n", count);
+        exit(0);
+    }
+}
+
+int main() {
+    struct sigaction action;
+    action.sa_handler = handler;
+    sigemptyset(&action.sa_mask);
+    action.sa_flags = 0;
+    sigaction(SIGTERM, &action, NULL);
+    sigaction(SIGINT, &action, NULL);
+
+    while (1);
+    return 0;
+}

@@ -1,0 +1,115 @@
+Domande a Scelta Multipla
+Quale delle seguenti affermazioni descrive correttamente la funzione fork?
+
+A) Crea un nuovo thread nel processo esistente
+B) Crea un nuovo processo duplicando l'immagine di memoria del processo padre
+C) Carica ed esegue un nuovo programma sostituendo il processo corrente
+D) Attende la terminazione di un processo figlio
+Risposta corretta: B
+Quale funzione è utilizzata per caricare ed eseguire un nuovo programma in un processo esistente?
+
+A) fork
+B) wait
+C) exec
+D) exit
+Risposta corretta: C
+Cosa rappresenta un processo zombie in un sistema operativo?
+
+A) Un processo che non risponde
+B) Un processo terminato il cui padre non ha ancora effettuato una wait
+C) Un processo in attesa di risorse
+D) Un processo che esegue in modo infinito
+Risposta corretta: B
+Esercizi di Programmazione
+Si determini l'output generato dal seguente programma:
+
+c
+Copia codice
+#include <stdio.h>
+#include <unistd.h>
+int main(int argc, char *argv[]) {
+    printf("A\n");
+    fork();
+    printf("B\n");
+    fork();
+    printf("C\n");
+    return 0;
+}
+Output atteso:
+
+mathematica
+Copia codice
+A
+B
+B
+C
+C
+C
+C
+Si determini l'albero dei processi generato dal seguente codice e l'output generato:
+
+c
+Copia codice
+#include <stdio.h>
+#include <unistd.h>
+int main(){
+    if (fork()){
+        if (!fork()){
+            fork();
+            printf("1 ");
+        } else {
+            printf("2 ");
+        }
+    } else {
+        printf("3 ");
+    }
+    printf("4 ");
+    return 0;
+}
+Output atteso:
+
+Copia codice
+2 4 3 4 1 4 1 4
+Domande Aperte
+Descrivi il comportamento della funzione wait in un sistema operativo. Quali sono i suoi utilizzi principali?
+
+Cosa succede quando un processo chiama la funzione exec? Descrivi i cambiamenti nel processo.
+
+Spiega la differenza tra processi zombie e processi orfani. Come vengono gestiti dal sistema operativo?
+
+Esercizi Pratici
+Implementa un programma che utilizza fork e wait per eseguire tre richieste HTTP alle seguenti URL, garantendo che due URL con lo stesso dominio risolvano il DNS solo una volta:
+
+http://a.com/
+http://b.com/1
+http://b.com/2
+c
+Copia codice
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+int main() {
+    pid_t pid;
+    printf("T1 - Start\n");
+    pid = fork();
+    if (pid == 0) {
+        printf("T3 - DNS b.com\n");
+        pid_t pid2;
+        pid2 = fork();
+        if (pid2 == 0) {
+            printf("T6 - HTTP http://b.com/1\n");
+            return 0;
+        } else {
+            printf("T5 - HTTP http://b.com/2\n");
+            wait((int *)0);  /* Attende T6 */
+            return 0;
+        }
+    } else {
+        printf("T2 - DNS a.com\n");
+        printf("T4 - HTTP http://a.com/\n");
+        wait((int *)0); /* Attende T3 - T5 */
+    }
+    printf("T7 - Utilizzo i risultati\n");
+    return 0;
+}
