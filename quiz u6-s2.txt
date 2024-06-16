@@ -1,0 +1,65 @@
+quiz u6-s2
+
+Si consideri il seguente codice C:
+
+c
+Copia codice
+int c = 40;
+int main(){
+    int i;
+    static int j;
+    ...
+}
+Quali variabili risiedono nello stack?
+
+A) Tutte
+B) i e j
+C) i
+Il seguente codice è corretto in C?
+
+c
+Copia codice
+#define size 1024
+int i[size];
+A) Sì
+B) No
+Si completi il seguente codice C:
+
+c
+Copia codice
+double * a;
+int i;
+scanf("%d", &i);
+a = ...
+A) float[i]
+B) malloc(i);
+C) malloc(i * sizeof(double));
+D) malloc(sizeof(double));
+La malloc:
+
+A) è una System Call
+B) è utilizzata dalla funzione sbrk
+C) utilizza la System Call sbrk
+Risposte
+Quali variabili risiedono nello stack?
+
+Risposta corretta: C) i
+Spiegazione: Nel codice, solo la variabile i risiede nello stack poiché c è una variabile globale e j è una variabile statica, entrambe allocate in segmenti di memoria diversi dallo stack.
+Il seguente codice è corretto in C?
+
+Risposta corretta: A) Sì
+Spiegazione: Definire un array di dimensioni fisse utilizzando una macro #define è corretto in C.
+Si completi il seguente codice C:
+
+Risposta corretta: C) malloc(i * sizeof(double));
+Spiegazione: Per allocare dinamicamente un array di double di lunghezza i, è necessario moltiplicare i per sizeof(double).
+La malloc:
+
+Risposta corretta: C) utilizza la System Call sbrk
+Spiegazione: La malloc utilizza la system call sbrk per allocare memoria dinamicamente.
+Questi esempi di quiz seguono il formato delle domande presenti nel documento e sono progettati per valutare la comprensione dei concetti legati alla gestione della memoria dinamica in C​​.
+
+
+
+
+

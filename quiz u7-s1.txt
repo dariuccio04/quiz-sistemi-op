@@ -1,0 +1,54 @@
+quiz u7-s1
+
+Due Thread dello stesso processo condividono le variabili globali?
+
+A) Sì
+B) No
+La funzione pthread_join attende la terminazione:
+
+A) Di un qualsiasi thread del sistema
+B) Di un qualsiasi thread del processo corrente
+C) Di un thread specifico
+Quando un thread invoca la funzione pthread_exit:
+
+A) Il thread corrente termina
+B) Il processo corrente termina
+C) Il thread specificato come argomento della funzione termina
+Si consideri il seguente codice:
+
+c
+Copia codice
+void * func(void *arg){
+    sleep(5);
+    exit(0);
+}
+
+int main(){
+    ...
+    pthread_create(&t, NULL, func, NULL);
+    sleep(10);
+    pthread_join(t, NULL);
+    exit(0);
+}
+Dopo quanti secondi termina il processo?
+
+A) 5
+B) 10
+C) 15
+Risposte
+Due Thread dello stesso processo condividono le variabili globali?
+
+Risposta corretta: A) Sì
+Spiegazione: I thread dello stesso processo condividono la memoria globale, incluse le variabili globali.
+La funzione pthread_join attende la terminazione:
+
+Risposta corretta: C) Di un thread specifico
+Spiegazione: La funzione pthread_join blocca l'esecuzione del thread chiamante fino alla terminazione del thread specificato.
+Quando un thread invoca la funzione pthread_exit:
+
+Risposta corretta: A) Il thread corrente termina
+Spiegazione: La funzione pthread_exit termina il thread corrente e rilascia le risorse allocate per esso.
+Dopo quanti secondi termina il processo?
+
+Risposta corretta: A) 5
+Spiegazione: Nel codice, il thread creato invoca exit(0) dopo 5 secondi, che termina l'intero processo.

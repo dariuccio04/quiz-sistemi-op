@@ -1,0 +1,55 @@
+quiz u7-s2
+
+Quiz e Domande
+Qual è la differenza tra concorrenza e parallelismo?
+
+A) La concorrenza permette l'esecuzione simultanea di istruzioni su più CPU, mentre il parallelismo no.
+B) La concorrenza permette l'esecuzione di più flussi di esecuzione all'interno di un singolo programma, mentre il parallelismo permette l'esecuzione simultanea di più calcoli su diverse CPU.
+C) La concorrenza e il parallelismo sono sinonimi.
+Cosa afferma la Legge di Amdahl?
+
+A) Tutti gli algoritmi possono essere parallelizzati.
+B) Il miglioramento delle prestazioni è limitato dalla frazione di codice non parallelizzabile.
+C) Più core si utilizzano, maggiori sono le prestazioni senza limiti.
+Qual è il problema delle sezioni critiche nei thread?
+
+A) Due thread non devono mai accedere allo stesso file contemporaneamente.
+B) Due thread non devono mai eseguire contemporaneamente.
+C) Due thread non devono mai accedere contemporaneamente alle stesse variabili condivise.
+Cos'è un Mutex?
+
+A) Un costrutto di sincronizzazione che gestisce l'accesso a una sezione critica.
+B) Un tipo di thread.
+C) Un tipo di memoria condivisa.
+Qual è la funzione di pthread_mutex_lock?
+
+A) Rilascia il lock del mutex.
+B) Inizializza il mutex.
+C) Acquisisce il lock del mutex.
+Qual è la funzione di pthread_mutex_unlock?
+
+A) Rilascia il lock del mutex.
+B) Inizializza il mutex.
+C) Acquisisce il lock del mutex.
+Che cosa si intende per deadlock?
+
+A) Una situazione in cui due o più thread continuano a eseguire senza interruzioni.
+B) Una situazione in cui due o più thread risultano bloccati, ognuno attendendo una condizione che non potrà mai verificarsi.
+C) Una situazione in cui un thread termina senza liberare le risorse.
+Quale funzione viene utilizzata per creare un semaforo con nome in POSIX?
+
+A) pthread_create
+B) sem_open
+C) sem_init
+Esercizi
+Implementa un programma in C che utilizza i mutex per sincronizzare l'accesso a una variabile condivisa tra due thread.
+
+Scrivi un codice in C che dimostri un esempio di deadlock con due mutex. Poi, modifica il codice per evitare il deadlock.
+
+Spiega con un esempio come utilizzare i semafori POSIX per sincronizzare l'accesso a una risorsa condivisa tra più processi.
+
+Descrivi la differenza tra named e unnamed semaphores e fornisci un esempio di utilizzo per ciascuno.
+
+Scrivi un programma in C che utilizza pthread_mutex_trylock per tentare di acquisire un lock senza bloccare il thread chiamante. Spiega quando potrebbe essere utile utilizzare questa funzione.
+
+Progetta un algoritmo che dimostri l'applicazione della Legge di Amdahl. Implementa l'algoritmo in C e confronta le prestazioni con e senza parallelizzazione.

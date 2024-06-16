@@ -1,0 +1,65 @@
+quiz u6-s1
+
+Domanda 1: Memoria nei Sistemi ad Processore
+Quali sono gli obiettivi principali della gestione della memoria da parte del sistema operativo nei sistemi ad processore?
+A) Alte prestazioni, isolamento tra processi, facilità per il programmatore
+B) Basse prestazioni, condivisione tra processi, complessità per il programmatore
+C) Alte prestazioni, condivisione tra processi, complessità per il programmatore
+D) Basse prestazioni, isolamento tra processi, facilità per il programmatore
+Domanda 2: Approcci Storici
+Quale approccio storico introduce il concetto di Indirizzo Logico o Virtuale?
+A) Sostituzione totale
+B) Base e Limit
+C) Memoria segmentata
+D) Paginazione
+Domanda 3: Paginazione
+Quali sono i vantaggi dell'approccio a paginazione?
+A) Frammentazione, poco flessibile
+B) No frammentazione, flessibile
+C) Richiede un hardware lento, poco sicuro
+D) Non è usato nei moderni processori
+Domanda 4: Memoria Virtuale
+Cosa succede quando un processo emette un indirizzo di una pagina che non è in memoria?
+A) Il processo continua l'esecuzione ignorando l'indirizzo
+B) La MMU avverte il SO che carica la pagina da disco
+C) La pagina viene cancellata dal disco
+D) La CPU si riavvia
+Domanda 5: Rimpiazzamento delle Pagine
+Quale algoritmo di rimpiazzamento delle pagine rimuove la pagina che non viene usata da più tempo?
+A) FIFO
+B) Ottimo
+C) Least Recently Used (LRU)
+D) First-In-First-Out (FIFO)
+Domanda 6: Layout della Memoria
+Quali sono le quattro zone di memoria in un processo?
+A) Heap, Stack, Registro, Cache
+B) Codice, Dati, Stack, Heap
+C) CPU, RAM, Disco, ROM
+D) Registro, Cache, RAM, ROM
+Domanda 7: Loader, Librerie e Pagine Condivise
+Qual è il compito principale del Loader?
+A) Compilare il codice
+B) Caricare il codice del programma e le variabili globali inizializzate in memoria
+C) Eseguire il programma senza caricarlo in memoria
+D) Scrivere il codice del programma
+Domanda 8: Gestione della Memoria in Bash
+Cosa rappresenta la colonna RES nel comando top di Bash?
+A) Quante pagine del processo sono su disco
+B) Quante pagine dello spazio virtuale di un processo sono caricate in memoria fisica
+C) Quanta memoria è disponibile nella macchina
+D) Quanta memoria è stata utilizzata dal processo nella sua storia
+Risposte Corrette
+
+
+
+
+
+
+A
+B
+B
+B
+C
+B
+B
+B
