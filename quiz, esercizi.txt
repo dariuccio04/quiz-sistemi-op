@@ -1,0 +1,171 @@
+quiz, esercizi
+
+Qual è il comando per creare un nuovo processo in POSIX?
+
+A) fork()
+B) exec()
+C) spawn()
+D) clone()
+Quale delle seguenti affermazioni è vera riguardo la funzione fork()?
+
+A) Crea un nuovo thread nel processo corrente
+B) Duplica il processo chiamante, creando un nuovo processo
+C) Termina il processo corrente
+D) Esegue un nuovo programma nel processo corrente
+Pipe e FIFO
+Quale è la differenza principale tra una pipe e una FIFO?
+
+A) Le pipe sono bidirezionali, le FIFO no
+B) Le FIFO sono bidirezionali, le pipe no
+C) Le pipe esistono solo in memoria, le FIFO possono essere file nel filesystem
+D) Non c'è differenza tra pipe e FIFO
+Quale delle seguenti chiamate di sistema POSIX crea una pipe?
+
+A) pipe()
+B) mkfifo()
+C) open()
+D) socket()
+Memoria
+Quale parte della memoria di un processo è utilizzata per la gestione delle variabili dinamiche?
+
+A) Stack
+B) Heap
+C) Data segment
+D) Text segment
+Quale comando POSIX è usato per allocare memoria dinamicamente?
+
+A) malloc()
+B) alloc()
+C) create()
+D) memalloc()
+Segnali
+Qual è la funzione POSIX per inviare un segnale a un processo?
+
+A) send()
+B) kill()
+C) signal()
+D) raise()
+Quale segnale è comunemente usato per richiedere l'interruzione di un processo?
+
+A) SIGKILL
+B) SIGTERM
+C) SIGSTOP
+D) SIGINT
+Gestione File con Librerie Standard o System Call POSIX
+Quale chiamata di sistema POSIX apre un file?
+
+A) fopen()
+B) open()
+C) create()
+D) read()
+Quale chiamata di sistema POSIX è usata per leggere da un file?
+
+A) fread()
+B) read()
+C) gets()
+D) file_read()
+Thread
+Quale libreria POSIX è comunemente usata per la gestione dei thread?
+
+A) pthread
+B) threadlib
+C) thr
+D) proc
+Quale funzione è usata per creare un nuovo thread in POSIX?
+
+A) thread_create()
+B) pthread_create()
+C) start_thread()
+D) create_thread()
+Esercizi Pratici:
+Scrivere un programma in C che crea un nuovo processo utilizzando la funzione fork(). Il processo figlio deve stampare "Sono il processo figlio" e il processo padre deve stampare "Sono il processo padre".
+
+Implementare un programma in C che crea una pipe, scrive un messaggio nella pipe e lo legge dallo stesso processo.
+
+Descrivere il layout della memoria virtuale di un processo in Linux, spiegando il ruolo dello stack, dell'heap e del program break.
+
+Scrivere un programma in C che utilizza segnali per gestire l'interruzione di un processo. Utilizzare la funzione signal() per catturare il segnale SIGINT e stampare un messaggio quando viene ricevuto.
+
+Scrivere un programma in C che apre un file esistente, legge il suo contenuto e lo stampa a schermo utilizzando le system call POSIX open(), read() e close().
+
+Scrivere un programma in C che crea due thread. Ogni thread deve stampare un messaggio diverso, e il main thread deve aspettare che entrambi i thread terminino prima di terminare il programma.
+
+
+
+
+Esercizi
+Processi
+Esercizio: Creazione e Comunicazione tra Processi
+Descrizione: Scrivere un programma in C che crea un nuovo processo utilizzando la funzione fork(). Il processo figlio deve inviare un messaggio al processo padre attraverso una pipe. Il processo padre deve leggere il messaggio dalla pipe e stamparlo.
+Vincoli: Utilizzare solo le chiamate di sistema POSIX, senza l'uso delle funzioni della libreria standard C.
+Suggerimenti: Utilizzare le chiamate di sistema pipe(), fork(), write(), read().
+Pipe e FIFO
+Esercizio: Utilizzo di FIFO per la Comunicazione Interprocesso
+Descrizione: Scrivere un programma in C che crea una FIFO (named pipe) utilizzando la chiamata di sistema mkfifo(). Un processo deve scrivere un messaggio nella FIFO e un altro processo deve leggere e stampare il messaggio.
+Vincoli: La gestione degli errori può essere trascurata.
+Suggerimenti: Utilizzare le chiamate di sistema mkfifo(), open(), write(), read(), close().
+Memoria
+Esercizio: Allocazione Dinamica della Memoria
+
+Descrizione: Scrivere un programma in C che alloca dinamicamente un array di interi utilizzando la chiamata di sistema mmap(). Il programma deve riempire l'array con valori, stamparli e quindi liberare la memoria allocata.
+Vincoli: Utilizzare mmap() per l'allocazione e munmap() per la deallocazione.
+Suggerimenti: Consultare la documentazione di mmap() per comprendere i parametri necessari.
+Esercizio: Layout della Memoria di un Processo
+
+Descrizione: Descrivere il layout della memoria virtuale di un processo in Linux, spiegando il ruolo dello stack, dell'heap e del program break. Fornire un esempio di codice in C che mostra l'utilizzo di ciascuna di queste sezioni di memoria.
+Vincoli: La spiegazione dovrebbe includere diagrammi se necessari.
+Suggerimenti: Utilizzare variabili locali per lo stack, malloc() per l'heap e mostrare la crescita dello stack e dell'heap.
+Segnali
+Esercizio: Gestione dei Segnali
+Descrizione: Scrivere un programma in C che cattura il segnale SIGINT (Ctrl+C) e stampa un messaggio personalizzato quando il segnale viene ricevuto.
+Vincoli: Utilizzare la chiamata di sistema signal() per impostare il gestore del segnale.
+Suggerimenti: Il gestore del segnale dovrebbe essere una funzione che stampa il messaggio e poi termina il programma.
+Gestione File con Librerie Standard o System Call POSIX
+Esercizio: Lettura e Scrittura su File con POSIX
+Descrizione: Scrivere un programma in C che apre un file esistente, legge il contenuto e lo stampa sullo schermo. Poi, il programma deve scrivere una nuova riga di testo nel file.
+Vincoli: Utilizzare solo le chiamate di sistema POSIX open(), read(), write(), lseek(), close().
+Suggerimenti: Gestire correttamente il puntatore del file per la lettura e scrittura.
+Thread
+Esercizio: Creazione e Sincronizzazione di Thread
+Descrizione: Scrivere un programma in C che crea due thread. Ogni thread deve eseguire una funzione che stampa un messaggio diverso un certo numero di volte. Utilizzare mutex per sincronizzare l'accesso alla stampa dei messaggi.
+Vincoli: Utilizzare la libreria POSIX per thread (pthread), pthread_create(), pthread_join(), pthread_mutex_init(), pthread_mutex_lock(), pthread_mutex_unlock(), pthread_mutex_destroy().
+Suggerimenti: Assicurarsi che i messaggi siano stampati in modo ordinato utilizzando il mutex per evitare interruzioni.
+Esempio di Esercizio con Implementazione
+Esercizio: Inversione di un File Binario
+Descrizione: Si scriva un programma in C che accetti due argomenti dalla linea di comando. Il programma legge il file binario specificato come primo argomento e memorizza i suoi byte nel secondo file in ordine inverso.
+Vincoli: Utilizzare le System Call POSIX (senza usare funzioni della libreria standard del C). Si trascuri la gestione degli errori.
+Suggerimenti: Utilizzare le chiamate di sistema open(), read(), write(), lseek(), close().
+c
+Copia codice
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main(int argc, char *argv[]) {
+    int fd_in, fd_out;
+    off_t file_size, i;
+    char buffer;
+
+    fd_in = open(argv[1], O_RDONLY);
+    fd_out = open(argv[2], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+
+    file_size = lseek(fd_in, 0, SEEK_END);
+
+    for (i = 1; i <= file_size; i++) {
+        lseek(fd_in, -i, SEEK_END);
+        read(fd_in, &buffer, 1);
+        write(fd_out, &buffer, 1);
+    }
+
+    close(fd_in);
+    close(fd_out);
+
+    return 0;
+}
+Questi esercizi forniscono una copertura completa dei concetti richiesti, con enfasi sulla programmazione in C e l'utilizzo delle system call POSIX.
+
+
+
+
+

@@ -1,0 +1,68 @@
+quiz u8-s3
+
+Quiz Domande:
+Qual è lo scopo principale di un Package Manager?
+
+A) A instradare i pacchetti di rete
+B) A installare i pacchetti software da repository pubblici
+C) A installare i programmi creati dall'utente
+Quali sono i vantaggi dell'utilizzo di un Package Manager monolitico?
+
+A) Installazione veloce
+B) Ogni pacchetto contiene tutto ciò che gli serve
+C) Non spreco di spazio su disco
+Quali sono i comandi comuni utilizzati con un Package Manager? (seleziona tutte le risposte corrette)
+
+A) install
+B) remove
+C) search
+D) update
+Un pacchetto Deb contiene tutte le sue dipendenze?
+
+A) Sì
+B) No
+Quale dei seguenti comandi apt è usato per aggiornare la lista dei pacchetti disponibili?
+
+A) apt install
+B) apt update
+C) apt remove
+D) apt autoclean
+Quali dei seguenti package manager è specifico per l'ambiente Python?
+
+A) npm
+B) pip
+C) go get
+D) maven
+Quali sono le caratteristiche principali di un pacchetto Snap? (seleziona tutte le risposte corrette)
+
+A) Contiene il programma e tutte le dipendenze
+B) Richiede meno spazio su disco rispetto ad apt
+C) Le applicazioni girano in una SandBox
+D) È pensato solo per utenti esperti
+Qual è il comando dpkg per disinstallare un pacchetto?
+
+A) dpkg -i
+B) dpkg -r
+C) dpkg -l
+D) dpkg -L
+Quali dei seguenti formati di pacchetti binari sono utilizzati in Debian e Ubuntu?
+
+A) RPM
+B) Deb
+C) DMG
+D) tar.gz
+Un pacchetto Snap contiene tutte le sue dipendenze?
+
+A) Sì
+B) No
+Risposte Corrette:
+B) A installare i pacchetti software da repository pubblici
+B) Ogni pacchetto contiene tutto ciò che gli serve
+A) install, B) remove, D) update
+B) No
+B) apt update
+B) pip
+A) Contiene il programma e tutte le dipendenze, C) Le applicazioni girano in una SandBox
+B) dpkg -r
+B) Deb
+A) Sì

@@ -1,0 +1,57 @@
+quiz u8-s1
+
+Slide: u8-s1-vm-container (1).pdf
+Domanda 1:
+Quali sono le principali differenze tra un layer di compatibilità API e un layer di compatibilità ABI?
+
+A) API richiede ricompilazione del software, ABI no.
+B) ABI richiede ricompilazione del software, API no.
+C) Entrambi richiedono ricompilazione del software.
+D) Nessuno richiede ricompilazione del software.
+Risposta corretta: A
+
+Domanda 2:
+Cosa permette di fare il software Wine?
+
+A) Eseguire programmi Linux su Windows.
+B) Eseguire programmi Windows su Linux e MacOS.
+C) Eseguire programmi MacOS su Linux.
+D) Eseguire programmi Linux su MacOS.
+Risposta corretta: B
+
+Domanda 3:
+Qual è una caratteristica del Windows Subsystem for Linux (WSL) introdotto nel 2019?
+
+A) Richiede ricompilazione.
+B) È un vero e proprio layer di compatibilità.
+C) È una VM minimale con un vero kernel.
+D) Non permette l'esecuzione di programmi grafici.
+Risposta corretta: C
+
+Slide: u7-s3-sync-problems (1).pdf
+Domanda 1:
+Qual è la soluzione classica per risolvere il problema del produttore-consumatore?
+
+A) Usare una variabile contatore.
+B) Utilizzare busy waiting.
+C) Implementare due semafori: empty e full.
+D) Utilizzare mutex per sincronizzare il contatore.
+Risposta corretta: C
+
+Domanda 2:
+Cosa fa la funzione sem_post(&s2); nel contesto del problema produttore-consumatore?
+
+A) Inizializza il semaforo.
+B) Blocca il semaforo.
+C) Incrementa il valore del semaforo.
+D) Decrementa il valore del semaforo.
+Risposta corretta: C
+
+Domanda 3:
+Nel problema produttore-consumatore, quale è l'errore principale del codice che utilizza contatore++ e contatore--?
+
+A) Non gestisce correttamente il buffer.
+B) Produce accesso concorrente a variabili condivise.
+C) Non incrementa correttamente il semaforo.
+D) Usa una variabile contatore sbagliata.
+Risposta corretta: B

@@ -1,0 +1,88 @@
+quiz u8-s2
+
+Domande e Quiz
+1. Macchine Virtuali e Container
+Domanda 1:
+Quale tra questi non è una motivazione per l'uso di VM?
+
+Maggiore sicurezza
+Maggiore affidabilità
+Maggiore velocità della memoria
+Domanda 2:
+Una macchina fisica sta eseguendo una VM. Quanti kernel sono in esecuzione?
+
+Nessuno
+1
+2
+3
+Domanda 3:
+Una VM può usare direttamente la memoria fisica della macchina?
+
+Mai
+Sempre
+Se la CPU lo permette
+Domanda 4:
+Una macchina fisica sta eseguendo un container. Quanti kernel sono in esecuzione?
+
+Nessuno
+1
+2
+3
+Domanda 5:
+Cosa è un container?
+
+Un FS isolato
+Un namespace
+Un gruppo di processi con privilegi limitati
+Domanda 6:
+Un container può accedere al File System della macchina ospitante?
+
+Sempre
+Mai
+Dipende da come è stato creato
+Domanda 7:
+Quale tra questi non è un servizio offerto dai Cloud Provider?
+
+Esecuzione di VM
+Abbonamento a database remoto
+Licenze di software da eseguire su PC
+Domanda 8:
+Quali delle seguenti affermazioni è vera? Un layer di compatibilità:
+
+è una VM
+è un insieme di container
+permette di eseguire programmi compilati su un'architettura diversa
+permette di eseguire programmi compilati su un SO diverso
+​​
+
+2. Produttore e Consumatore
+Domanda 1:
+Quali sono le variabili condivise tra Produttore e Consumatore?
+
+buffer e contatore
+in e out
+buffer e in
+Domanda 2:
+Qual è il problema principale del codice del produttore e consumatore che usa contatore come variabile condivisa?
+
+Accesso concorrente al contatore
+L'uso di buffer circolare
+Il controllo continuo della variabile contatore
+Domanda 3:
+Quali soluzioni vengono proposte per risolvere il problema di sincronizzazione nel modello classico di produttore e consumatore?
+
+Uso di semafori
+Uso di mutex
+Uso di variabili globali
+Domanda 4:
+Cosa fa il semaforo empty nel problema del produttore e consumatore?
+
+Conta quanti posti liberi ci sono nel buffer
+Conta quanti posti occupati ci sono nel buffer
+Conta il numero di produttori attivi
+Domanda 5:
+Nel codice del produttore, quale operazione segue immediatamente l'inserimento di un elemento nel buffer?
+
+Incremento della variabile in
+Decremento della variabile contatore
+Incremento del semaforo full

@@ -1,0 +1,42 @@
+quiz u7-s3
+
+Quiz sulle problematiche di sincronizzazione nei sistemi operativi
+Qual è la funzione del semaforo s1 nell'esempio del grafico di precedenza?
+
+A) Inizializzare il valore del contatore
+B) Contare i posti liberi nel buffer
+C) Sincronizzare l'esecuzione dei thread
+D) Incrementare il valore di contatore
+Risposta corretta: C) Sincronizzare l'esecuzione dei thread
+
+Quale di questi problemi è tipico del produttore e consumatore senza meccanismi di sincronizzazione?
+
+A) Accesso concorrente a variabili non condivise
+B) Busy waiting e spreco di CPU
+C) Deadlock tra thread
+D) Mancanza di buffer sufficienti
+Risposta corretta: B) Busy waiting e spreco di CPU
+
+Come si può evitare l'accesso concorrente alla variabile contatore nel problema del produttore e consumatore?
+
+A) Usare due semafori
+B) Utilizzare una variabile globale
+C) Incrementare il buffer size
+D) Implementare mutex per la gestione delle variabili condivise
+Risposta corretta: D) Implementare mutex per la gestione delle variabili condivise
+
+Qual è il ruolo del semaforo full nella soluzione classica del problema del produttore e consumatore?
+
+A) Indicare quanti posti liberi ci sono nel buffer
+B) Contare i posti occupati nel buffer
+C) Inizializzare il buffer
+D) Sincronizzare l'accesso ai dati non condivisi
+Risposta corretta: B) Contare i posti occupati nel buffer
+
+Cosa succede se il produttore cerca di inserire un elemento quando il buffer è pieno nel problema del produttore e consumatore?
+
+A) L'elemento viene inserito comunque, causando un errore
+B) Il produttore attende fino a che non ci sia spazio disponibile nel buffer
+C) Il produttore rimuove un elemento esistente per fare spazio
+D) Il produttore termina l'esecuzione
+Risposta corretta: B) Il produttore attende fino a che non ci sia spazio disponibile nel buffer
