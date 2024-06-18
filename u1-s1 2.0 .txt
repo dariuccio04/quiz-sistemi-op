@@ -1,0 +1,75 @@
+u1-s1 2.0 
+
+Quiz: Introduzione ai Sistemi Operativi
+Domande a scelta multipla
+Cosa è un sistema operativo?
+
+a) Un programma che fornisce risorse fisiche
+b) Un programma che gestisce l'accesso all'hardware da parte dei programmi
+c) Un dispositivo di input/output
+d) Un'unità di memoria
+Quale delle seguenti componenti non fa parte dell'architettura di un sistema di elaborazione?
+
+a) Arithmetic Logic Unit
+b) Control Unit
+c) Programmi Applicativi
+d) Sensori
+Qual è il compito principale del gestore dei processi in un sistema operativo?
+
+a) Creare e gestire i processi
+b) Gestire l'allocazione di memoria ai processi
+c) Organizzare la memoria su disco
+d) Pilotare i dispositivi di input/output
+Quale dei seguenti non è un tipo di kernel?
+
+a) Kernel monolitico
+b) Micro-kernel
+c) Kernel stratificato
+d) Kernel virtuale
+Le funzioni di libreria vengono eseguite:
+
+a) In Kernel Mode
+b) In User Mode
+c) In modalità mista
+d) Dipende dal tipo di funzione
+Domande aperte
+Descrivi le principali componenti di un sistema di elaborazione.
+
+Spiega la differenza tra Kernel Mode e User Mode.
+
+Cos'è una System Call e come differisce da una funzione di libreria?
+
+Quali sono le principali tipologie di sistemi operativi menzionate nel documento?
+
+Cosa rappresenta un processo in un sistema operativo e come viene identificato?
+
+Risposte
+Domande a scelta multipla:
+
+b) Un programma che gestisce l'accesso all'hardware da parte dei programmi
+d) Sensori
+a) Creare e gestire i processi
+d) Kernel virtuale
+b) In User Mode
+Domande aperte:
+
+Componenti di un sistema di elaborazione:
+
+Hardware: Fornisce le risorse fisiche come CPU, memoria, disco.
+Sistema Operativo: Gestisce l'accesso all'hardware da parte dei programmi.
+Programmi Applicativi: Eseguono i compiti desiderati dagli utenti o dal sistema.
+Utenti: Lanciano e usano programmi.
+Kernel Mode vs User Mode:
+
+Kernel Mode: Il kernel ha accesso completo all'hardware, può accedere a ogni locazione di memoria e registro di dispositivo di I/O. È eseguito con privilegi speciali e gli errori sono potenzialmente distruttivi.
+User Mode: Le applicazioni hanno possibilità limitate, accedono a uno spazio di indirizzamento limitato (memoria virtuale) e non possono accedere direttamente ai dispositivi di I/O. Le funzioni di libreria si eseguono in User Mode.
+System Call vs Funzione di Libreria:
+
+System Call: Funzioni messe a disposizione dal SO alle applicazioni per offrire servizi come creare processi, accedere ai dischi, ecc. Vengono servite dal kernel.
+Funzione di Libreria: Moduli software che svolgono compiti comuni a più applicazioni, eseguite in User Mode e non sempre necessitano di System Call.
+Tipologie di sistemi operativi:
+
+Il documento menziona varie tipologie di sistemi operativi, ma principalmente include i kernel monolitici, micro-kernel e i kernel a livelli stratificati.
+Processo in un sistema operativo:
+
+Un processo è un programma in esecuzione con certi privilegi e risorse. Accede alla CPU a turno con gli altri programmi e deve permettere che il suo stato sia conservato quando viene messo in pausa. Ogni processo è identificato da un numero detto PID.
