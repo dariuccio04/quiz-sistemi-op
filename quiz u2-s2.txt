@@ -1,89 +1,87 @@
 Visualizzare le informazioni di sistema
-
 Usare il comando uname per visualizzare il nome del kernel del sistema operativo.
 Quale opzione del comando uname permette di visualizzare tutte le informazioni del sistema?
-Gestione dei file
 
+Gestione dei file
 Creare un file chiamato esempio.txt nella directory /tmp.
 Utilizzare il comando chmod per rendere il file eseguibile solo dal proprietario.
 Come si può verificare che le modifiche ai permessi siano state applicate correttamente?
-Navigazione nel file system
 
+Navigazione nel file system
 Spostarsi nella directory /var/log.
 Elencare tutti i file in questa directory che sono stati modificati negli ultimi 7 giorni usando il comando find.
-Manipolazione degli utenti
 
+Manipolazione degli utenti
 Creare un nuovo utente chiamato nuovo_utente e assegnarlo al gruppo nuovo_gruppo.
 Modificare la password per l'utente nuovo_utente.
 Come si può bloccare l'account di nuovo_utente senza cancellarlo?
-Processi e gestione
 
+Processi e gestione
 Avviare un processo che esegue il comando sleep 1000 in background.
 Visualizzare l'ID del processo avviato.
 Termina il processo utilizzando il comando kill.
-Monitoraggio del sistema
 
+Monitoraggio del sistema
 Usare il comando top per monitorare i processi in esecuzione.
 Quale comando può essere utilizzato per visualizzare solo i processi avviati dall'utente corrente?
-Configurazione della rete
 
+Configurazione della rete
 Visualizzare tutte le interfacce di rete attive usando il comando ip.
 Configurare un indirizzo IP statico per una delle interfacce di rete.
 Come si può verificare che l'indirizzo IP sia stato configurato correttamente?
-Backup e compressione
 
+Backup e compressione
 Creare un archivio tar.gz della directory /home/utente.
 Come si può estrarre il contenuto dell'archivio creato in una nuova directory chiamata /backup?
 
 
 
 Gestione dei pacchetti
-
 Usare il comando apt per aggiornare l'indice dei pacchetti.
 Installare il pacchetto curl.
 Come si può verificare la versione installata di curl?
-Permessi speciali
 
+Permessi speciali
 Creare un file chiamato script.sh e rendilo eseguibile.
 Aggiungere i permessi setuid al file script.sh.
 Qual è l'effetto dei permessi setuid su un file eseguibile?
-Gestione dei dischi
 
+Gestione dei dischi
 Visualizzare la tabella delle partizioni del disco /dev/sda usando il comando fdisk.
 Montare una partizione esistente /dev/sda1 sulla directory /mnt/disk1.
 Come si può smontare questa partizione?
-Configurazione dei servizi
 
+Configurazione dei servizi
 Abilitare e avviare il servizio ssh usando systemctl.
 Verificare lo stato del servizio ssh.
 Come si può configurare il servizio ssh per avviarsi automaticamente al boot del sistema?
-Script di shell
 
+Script di shell
 Scrivere uno script di shell che controlli se un dato file esiste e, in caso affermativo, ne visualizzi il contenuto.
 Salvare lo script in un file chiamato check_file.sh.
 Come si può rendere questo script eseguibile e poi eseguirlo?
-Compressione e decompressione
 
+Compressione e decompressione
 Comprimere la directory /var/log in un file chiamato log_backup.tar.gz.
 Estrarre solo il file syslog dall'archivio creato.
 Come si può verificare l'integrità dell'archivio log_backup.tar.gz?
-Gestione delle reti
 
+Gestione delle reti
 Configurare un file di hostname per la macchina locale.
 Modificare il file /etc/hosts per aggiungere una nuova voce per il dominio example.com associato all'IP 192.168.1.100.
 Come si può verificare la risoluzione DNS per example.com?
-Sicurezza del sistema
 
+Sicurezza del sistema
 Configurare il firewall ufw per permettere solo le connessioni SSH.
 Come si può visualizzare lo stato attuale delle regole del firewall ufw?
 Bloccare tutte le connessioni in ingresso eccetto quelle provenienti dall'indirizzo IP 192.168.1.10.
-Automatizzazione dei compiti
 
+Automatizzazione dei compiti
 Usare crontab per schedulare uno script di backup giornaliero da eseguire alle 2:00 AM.
 Quale comando può essere utilizzato per visualizzare i job cron dell'utente corrente?
 Come si può disabilitare temporaneamente un job cron senza eliminarlo?
-Analisi dei log
 
+Analisi dei log
 Usare grep per trovare tutte le occorrenze della parola "error" nel file /var/log/syslog.
 Filtrare i risultati per mostrare solo le occorrenze di "error" avvenute nel mese di giugno.
 Come si può contare il numero di occorrenze di "error" nel file /var/log/syslog?
