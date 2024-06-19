@@ -1,106 +1,16 @@
 quiz u4-s2
 
-Domande di scelta multipla:
-Un inode può rappresentare:
-
-File
-Cartelle
-File o cartelle
-Link
-Partizioni
-Il comando mount serve a:
-
-Montare dischi
-Formattare dischi
-Manipolare directory
-Gli inode possono essere memorizzati:
-
-In qualsiasi posizione del disco
-All'inizio
-Alla fine
-Gli elementi di una cartella sono memorizzati:
-
-All'interno del suo inode
-In un blocco dati separato
-In Linux, ogni utente può appartenere a un solo gruppo:
-
-Vero
-Falso
-L'utente root esegue i suoi processi in kernel-mode?
-
-Si
-No
-Il permesso di esecuzione sulle directory:
-
-Non ha effetto
-Permette di eseguire i programmi contenuti
-Permette di attraversare la cartella
-Esercizi pratici:
-Permessi e operazioni su file e directory:
-
-La cartella d contiene un file f. L'utente u ha permessi sulla cartella d r-x e sul file f rw-. L'utente può rimuovere il file?
-Si
-No
-La cartella d contiene un file f. L'utente u ha permessi sulla cartella d r-x e sul file f rw-. L'utente può eseguire il file?
-Si
-No
-Gestione permessi su file:
-
-L'utente u appartiene ai gruppi g1 e g2. Una cartella contiene i seguenti file:
-diff
-Copia codice
--rw-r--r--  1 u g3    2577901 Jul 28  2013 f1.txt
--r--r--r--  1 v g1    5634545 Jul 13  2013 f2.txt
--rwxrwxrwx  1 z g4    8753244 Jul 29  2013 f3.txt
-Su quali di questi file u ha permesso di scrittura?
-Tutti
-Solo f1
-Solo f3
-f1 e f3
-Configurazione del file /etc/fstab:
-
-Scrivere la configurazione corretta nel file /etc/fstab per montare automaticamente all'avvio un disco /dev/sdb1 nella directory /media/data con il file system ext4 e le opzioni defaults,errors=remount-ro.
-Esercizi di concetti teorici:
-Spiegazione degli inode:
-
-Spiega cos'è un inode e quali informazioni contiene. Inoltre, descrivi come gli inode vengono utilizzati nei file system Linux.
-Virtual File System (VFS):
-
-Cos'è il Virtual File System (VFS) in Linux e quali funzioni fondamentali deve implementare un file system per essere compatibile con VFS?
-Montaggio dei dischi:
-
-Descrivi il processo di montaggio di un disco in Linux, compresi i comandi necessari per montare un disco manualmente e come configurare il montaggio automatico all'avvio del sistema.
-
-Esercizi di scelta multipla:
-Comando chmod:
-
 Il comando chmod 755 file.txt assegna quali permessi al file file.txt?
 a) rwxr-xr-x
 b) r-xr-xr-x
 c) rw-r--r--
 d) rwxrwxrwx
-Comando chown:
-
-Qual è l'effetto del comando chown user:group file.txt?
-a) Cambia il proprietario del file in user e il gruppo in group
-b) Cambia solo il gruppo del file in group
-c) Cambia solo il proprietario del file in user
-d) Nessuno dei precedenti
-Link simbolici:
 
 Quale comando crea un link simbolico chiamato link.txt che punta al file target.txt?
 a) ln target.txt link.txt
 b) ln -s target.txt link.txt
 c) link target.txt link.txt
 d) symlink target.txt link.txt
-Comando df:
-
-Il comando df -h:
-a) Mostra lo spazio libero in forma leggibile dall'uomo
-b) Mostra l'utilizzo della memoria RAM
-c) Deframmenta il disco
-d) Formatta il disco
-Permessi speciali:
 
 Qual è il significato del bit SUID impostato su un file eseguibile?
 a) Il file viene eseguito con i permessi del proprietario del file
@@ -114,21 +24,80 @@ Hai un file script.sh con i seguenti permessi: -rw-r--r--. Esegui i comandi nece
 Rimuovere tutti i permessi di scrittura
 Aggiungere il permesso di esecuzione per il proprietario
 Aggiungere il permesso di esecuzione per tutti gli utenti
-Quali sono i permessi finali del file?
-Creazione e gestione dei link:
 
-Crea un link simbolico docs_link che punti alla directory ~/Documents.
-Crea un link fisico important_link che punti al file ~/Documents/important.txt.
-Verifica la corretta creazione dei link usando i comandi appropriati.
-Utilizzo del comando find:
+La cartella dir contiene un file file.txt. L'utente u ha permessi sulla cartella dir r-x e sul file file.txt rw-. L'utente può modificare il contenuto del file?
 
-Trova tutti i file con estensione .log nella directory /var/log che sono stati modificati negli ultimi 7 giorni.
-Trova e rimuovi tutti i file con estensione .tmp nella directory corrente e nelle sue sottodirectory.
-Backup con tar:
+ Sì
+ No
+Un file ha i seguenti permessi: -rwxr-xr--. Cosa può fare un utente che appartiene al gruppo proprietario del file?
 
-Crea un archivio backup.tar.gz contenente tutti i file e le directory presenti nella directory /home/user/Documents.
-Estrai l'archivio backup.tar.gz nella directory /home/user/restore.
-Gestione delle quote disco:
+ Leggere e scrivere il file
+ Leggere ed eseguire il file
+ Solo leggere il file
+ Solo eseguire il file
+Quali permessi sono necessari per attraversare una directory (cd in quella directory)?
 
-Abilita le quote disco per l'utente student su una partizione montata su /home.
-Imposta una quota di 2GB come hard limit e 1.5GB come soft limit per l'utente student.
+ Lettura
+ Scrittura
+ Esecuzione
+ Lettura ed esecuzione
+
+La directory projects contiene un file report.txt. L'utente alice ha permessi sulla directory projects r-x e sul file report.txt r--. L'utente alice può leggere il contenuto del file?
+
+Sì
+No
+Un file ha i seguenti permessi: -rw-r--r--. Cosa può fare un utente che non è né il proprietario del file né appartiene al gruppo proprietario del file?
+
+Leggere e scrivere il file
+Leggere ed eseguire il file
+Solo leggere il file
+Solo eseguire il file
+La directory data ha i permessi rwxr-xr-x. Quali operazioni può eseguire un utente che appartiene al gruppo proprietario della directory?
+
+Leggere, scrivere ed eseguire i file nella directory
+Leggere ed eseguire i file nella directory
+Solo leggere i file nella directory
+Solo eseguire i file nella directory
+Quali permessi sono necessari per eliminare un file all'interno di una directory?
+
+Lettura sulla directory
+Scrittura sulla directory
+Esecuzione sulla directory
+Lettura ed esecuzione sulla directory
+Un file ha i seguenti permessi: -rwx------. Chi può eseguire il file?
+
+Il proprietario del file
+Il gruppo proprietario del file
+Qualsiasi utente
+Nessuno
+Quiz sugli Inode
+Ogni file su un file system Unix/Linux è rappresentato da un inode. Cosa contiene un inode?
+
+Il nome del file
+I dati del file
+I permessi del file e i metadati come l'ID del proprietario e le date di creazione/modifica
+La posizione dei blocchi dati del file
+L'operazione ln file1 file2 crea:
+
+Un nuovo file con lo stesso contenuto
+Un link simbolico
+Un hard link
+Una copia del file1
+Un file ha due hard link. Quale affermazione è vera?
+
+I due file occupano lo stesso spazio su disco come due file separati
+Cancellando uno dei file, l'altro file viene eliminato
+Entrambi i file condividono lo stesso inode
+I file devono essere nella stessa directory
+Gli inode sono utilizzati per:
+
+Memorizzare i contenuti dei file
+Memorizzare le informazioni sui permessi, la proprietà e i metadati dei file
+Memorizzare le informazioni di rete
+Memorizzare i log di sistema
+Qual è il massimo numero di hard link che un file può avere?
+
+1
+2
+Dipende dal file system
+Illimitato
