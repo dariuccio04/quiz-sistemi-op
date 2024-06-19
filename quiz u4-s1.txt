@@ -1,100 +1,105 @@
 quiz u4-s1
 
-Il disco nei sistemi di elaborazione:
 Quali sono le principali tecnologie per la costruzione dei dischi?
 
-Nastri magnetici, dischi magnetici, stato solido (memorie flash)
-Qual è la differenza principale tra dischi magnetici e memorie flash?
+a) Nastri magnetici, dischi ottici, stato solido
+b) Nastri magnetici, dischi magnetici, stato solido (memorie flash)
+c) Nastri ottici, dischi magnetici, stato solido
+d) Nastri magnetici, dischi magnetici, dischi ottici
+Quale delle seguenti affermazioni sulla frammentazione interna è corretta?
 
-Nei dischi magnetici, la testina si sposta e l'accesso non ha un tempo costante. Le memorie flash hanno un tempo di accesso quasi costante e la scrittura è più lenta della lettura.
-I File:
-Quali sono le principali operazioni che possono essere eseguite sui file tramite System Call?
+a) Si verifica quando i blocchi di memoria sono sparsi per il disco
+b) È causata dall'allocazione di blocchi di dimensioni non uniformi
+c) Si verifica quando la dimensione del file non è un multiplo della dimensione del blocco
+d) È causata dalla cancellazione di file grandi
+Quali sono i vantaggi della File Allocation Table (FAT)?
 
-Creazione, lettura, scrittura, cancellazione, seek (movimento del cursore)
-Quali attributi possono avere i file?
+a) Velocità di accesso ai file migliorata
+b) Nessuna frammentazione interna
+c) Possibilità di caching della FAT
+d) Minori requisiti di spazio per la tabella di allocazione
+Quale delle seguenti affermazioni riguardanti la frammentazione esterna è corretta?
 
-Identificativo nel SO, permessi, tempo di creazione, di ultimo accesso
-I Direttori:
-Qual è la differenza principale tra file e direttori?
+a) Si verifica solo nei dischi a stato solido
+b) Si verifica quando ci sono blocchi di memoria inutilizzati sparsi per il disco
+c) È causata dalla lettura e scrittura sequenziale dei file
+d) È tipica dei sistemi con allocazione indicizzata
+Quali sono i file system utilizzati in Linux?
 
-I file contengono byte, mentre i direttori non contengono byte ma altri file o direttori.
-Quali operazioni possono essere eseguite sui direttori?
-
-Creazione, rimozione, listing, renaming
-Allocazione dei blocchi:
-Quali sono i vantaggi e gli svantaggi dell'allocazione contigua?
-
-Vantaggi: semplice e veloce, pochi metadati necessari. Svantaggi: frammentazione esterna.
-In cosa consiste l'allocazione concatenata e quali sono i suoi vantaggi?
-
-Ogni file è una linked list di blocchi. Vantaggi: no frammentazione esterna, tutti i blocchi sono usabili per ogni file.
-File system comuni:
-Quali file system sono tipicamente utilizzati nei sistemi operativi Unix e Linux?
-
-Unix: UFS, FFS. Linux: ext3, ext4
-Quali file system utilizza Windows?
-
-FAT, FAT32, NTFS
-
-Il disco nei sistemi di elaborazione:
-La memoria flash ha un tempo di accesso:
-Costante
-Variabile
-Lento
-Veloce
-I file:
-Un file contiene:
-
-Solo testo
-Una sequenza ordinata di bit
-Solo immagini
-Solo audio
-Quale di queste operazioni non può essere eseguita su un file?
-
-Creazione
-Lettura
-Formattazione
-Seek
-I direttori:
-Un direttorio può contenere:
-
-Solo file
-Solo altri direttori
-File e altri direttori
-Solo immagini
-I link a direttori possono generare cicli:
+a) FAT e NTFS
+b) ext3 e ext4
+c) HFS e HFS+
+d) APFS e HDFS
+Domande vero o falso:
+Il disco è una componente fondamentale dei sistemi di elaborazione perché permette di avere una memoria persistente.
 
 Vero
 Falso
-Allocazione dei blocchi:
-In un sistema con blocchi di 4KB, un file di 6000 byte occuperà quanti blocchi?
+Nei dischi a stato solido il tempo di accesso è quasi costante.
 
-1
-2
-3
-4
-L'allocazione contigua soffre di:
+Vero
+Falso
+L'allocazione concatenata elimina il problema della frammentazione interna.
 
-Frammentazione interna
-Frammentazione esterna
-Nessuna frammentazione
-Frammentazione dei file
-File system comuni:
-Quale file system è comunemente utilizzato nei sistemi operativi Windows?
+Vero
+Falso
+Un link a directory può generare cicli nel file system.
 
-UFS
-ext4
-NTFS
-HFS+
-Il file system ext4 è utilizzato principalmente in:
+Vero
+Falso
+La FAT è inefficiente per l'accesso sequenziale ai file.
 
-Windows
-MacOS
-Linux
-Unix
-Tabelle delle partizioni:
-Quale di questi metodi di partizionamento supporta dischi più grandi di 2TB?
-MBR
-GUID Partition Table (GPT)
-FAT32
-NTFS
+Vero
+Falso
+
+Quale tecnica di allocazione del disco riduce significativamente la frammentazione esterna?
+
+a) Allocazione continua
+b) Allocazione a liste concatenate
+c) Allocazione indicizzata
+d) Allocazione a blocchi variabili
+Quale delle seguenti affermazioni è vera riguardo ai Solid State Drives (SSD)?
+
+a) Gli SSD hanno parti mobili che possono usurarsi nel tempo.
+b) Gli SSD offrono velocità di lettura/scrittura più lente rispetto agli HDD.
+c) Gli SSD sono più resistenti agli urti rispetto agli HDD.
+d) Gli SSD consumano più energia rispetto agli HDD.
+In un file system con allocazione indicizzata, quale struttura dati è utilizzata per tenere traccia dei blocchi del file?
+
+a) Tabella di allocazione dei file (FAT)
+b) Bitmap
+c) Inode
+d) Lista concatenata
+Quale delle seguenti operazioni non è supportata dai file system con journaling?
+
+a) Recupero di dati dopo un crash
+b) Transazioni atomiche
+c) Deframmentazione automatica
+d) Registrazione delle modifiche dei metadati
+Qual è la principale differenza tra FAT32 e NTFS?
+
+a) FAT32 supporta file di dimensioni maggiori rispetto a NTFS.
+b) NTFS ha funzionalità di sicurezza avanzate che FAT32 non ha.
+c) FAT32 è più adatto per unità di grandi dimensioni rispetto a NTFS.
+d) NTFS è meno compatibile con i sistemi operativi moderni rispetto a FAT32.
+Domande vero o falso:
+Il file system ext4 supporta journaling, che aiuta a prevenire la corruzione dei dati in caso di crash.
+
+Vero
+Falso
+In un sistema di allocazione a liste concatenate, la posizione dei blocchi successivi è memorizzata all'interno del blocco stesso.
+
+Vero
+Falso
+I dischi magnetici offrono generalmente una maggiore durata rispetto ai dischi a stato solido (SSD).
+
+Vero
+Falso
+La deframmentazione è un processo utilizzato principalmente per ridurre la frammentazione esterna nei file system.
+
+Vero
+Falso
+L'allocazione continua è la tecnica più efficiente per file di dimensioni molto variabili.
+
+Vero
+Falso
