@@ -1,26 +1,69 @@
 quiz u4-s5
 
-Un sistema di dischi basato su RAID è sempre più affidabile di un disco singolo?
+Quale dei seguenti livelli RAID offre solo miglioramenti nelle prestazioni e non nell'affidabilità?
 
-A) Sì
-B) No
-In un sistema RAID 0, quali sono le conseguenze in caso di fallimento di un disco?
+ RAID 1
+ RAID 4
+ RAID 0
+ RAID 5
+Quale tecnica utilizza RAID per migliorare le prestazioni del sistema?
 
-A) I dati vengono persi
-B) È possibile recuperare i dati
-In un sistema RAID 1, quali sono le conseguenze in caso di fallimento di un disco?
+ Mirroring
+ Striping
+ Doppia parità
+ Compressione
+Qual è il vantaggio principale di RAID 1?
 
-A) I dati vengono persi
-B) È possibile recuperare i dati
-È possibile creare un sistema RAID 6 con 3 dischi?
+ Alta velocità di accesso ai dati
+ Tolleranza ai guasti
+ Basso costo
+ Alta capacità di storage
+Quale dei seguenti RAID distribuisce i dati e la parità su tutti i dischi?
 
-A) Sì
-B) No
-Qual è il sistema di accesso tipico a un FS Distribuito?
+ RAID 0
+ RAID 1
+ RAID 4
+ RAID 5
+In un sistema RAID 4, il disco di parità memorizza:
 
-A) Bus PCI
-B) Rete
-C) USB
+ Copie identiche dei dati
+ La somma dei dati
+ La parità dei dati sugli altri dischi
+ I metadati del file system
+Quiz 2
+
+Quale configurazione RAID resiste a due guasti?
+
+ RAID 0
+ RAID 1
+ RAID 5
+ RAID 6
+Quale dei seguenti RAID ha il minimo numero di dischi richiesti pari a 3?
+
+ RAID 0
+ RAID 1
+ RAID 5
+ RAID 6
+Quale delle seguenti affermazioni è vera riguardo ai file system distribuiti?
+
+ Risiedono su un solo disco
+ Necessitano di un software orchestratore
+ Non offrono miglioramenti nelle prestazioni
+ Sono sempre meno affidabili di un singolo file system
+Il protocollo Network File System (NFS) è tipicamente usato per:
+
+ Connettere dischi interni
+ Gestire la memoria virtuale
+ File system di rete
+ Creare backup di emergenza
+Qual è uno dei vantaggi principali dei file system distribuiti come Hadoop Distributed File System (HDFS)?
+
+ Non necessitano di replica dei dati
+ Operano su singoli server
+ Permettono di gestire grandi quantità di dati in modo efficiente
+ Non richiedono un software di gestione
+
+
 Quale livello di RAID offre la massima velocità ma la minima affidabilità?
 
 A) RAID 0
