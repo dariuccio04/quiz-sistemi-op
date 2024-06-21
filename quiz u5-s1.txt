@@ -1,17 +1,6 @@
 quiz u5-s1
 
-Cos'è un processo?
 
-A) Una componente del sistema operativo
-B) Il codice eseguibile di un programma
-C) Un programma in esecuzione
-D) Una variabile globale
-Come sono identificati i processi nel sistema operativo?
-
-A) Un nome
-B) Un ID numerico
-C) Non hanno identificativi
-D) Un percorso di file
 Quale tra i seguenti stati non è uno stato di un processo?
 
 A) Nuovo
@@ -52,14 +41,109 @@ Nel Priority Scheduling, un processo a bassa priorità potrebbe non venire mai e
 
 A) Vero
 B) Falso
-Risposte corrette
-C) Un programma in esecuzione
-B) Un ID numerico
-D) Bloccato
-B) Scheduler
-C) Process Control Block (PCB)
-A) Vero
-B) Falso
-A) Vero
-A) Vero
-A) Vero
+
+
+Quiz 3
+Quale delle seguenti sezioni di un processo in memoria contiene il codice eseguibile?
+
+A) Stack
+B) Heap
+C) Sezione di testo
+D) Sezione dati
+E) PCB
+Quiz 4
+Qual è l'obiettivo principale di un algoritmo di scheduling di tipo Round Robin?
+
+A) Eseguire il processo più lungo per primo
+B) Assegnare la CPU a turno per un tempo fissato
+C) Gestire processi in base alla loro priorità
+D) Eseguire il processo più breve per primo
+E) Allocare risorse I/O in modo efficiente
+Quiz 5
+Nel contesto del process control block (PCB), quale informazione è utilizzata per riprendere l'esecuzione di un processo interrotto?
+
+A) Informazioni di I/O
+B) Registri della CPU
+C) Stato del processo
+D) Contatore del programma
+E) Puntatori alle zone di memoria
+Quiz 6
+Quale dei seguenti è un esempio di processo avviato dal processo init?
+
+A) Browser
+B) Editor di testo
+C) Server Web
+D) Antivirus
+E) Terminale
+Quiz 7
+In Linux, quale comando è utilizzato per cedere la CPU volontariamente?
+
+A) sched_setparam()
+B) sched_yield()
+C) sched_getscheduler()
+D) sched_setscheduler()
+E) sched_getparam()
+Quiz 8
+Quale delle seguenti affermazioni è vera riguardo al First-Come First Served scheduling?
+
+A) È efficiente per tutti i tipi di processi
+B) È il più complesso tra gli algoritmi di scheduling
+C) Assegna la CPU al primo processo che la richiede finché non termina
+D) È l'algoritmo di default utilizzato in Linux
+E) Gestisce le priorità dei processi in modo ottimale
+Quiz 9
+Quale sezione di un processo in memoria è utilizzata per la memoria temporanea durante le chiamate di funzioni?
+
+A) Sezione di testo
+B) Sezione dati
+C) Stack
+D) Heap
+E) PCB
+Quiz 10
+Quale meccanismo permette a un processo di attendere il completamento di altri processi per coordinare un compito complesso?
+
+A) Context Switching
+B) Scheduling
+C) System Call
+D) Sincronizzazione
+E) Process Control Block
+Quiz 11
+Quale degli algoritmi di scheduling è inefficiente poiché potrebbe eseguire un processo lungo per primo, causando attese per gli altri processi?
+
+A) Shortest-Job First
+B) Priority Scheduling
+C) Round Robin
+D) First-Come First Served
+E) Multi-Level Queue
+Quiz 12
+In un sistema operativo moderno, quale processo è avviato all'avvio del sistema e continua a essere eseguito fino allo shutdown?
+
+A) Shell
+B) Kernel
+C) Init
+D) Scheduler
+E) System Call
+Quiz 13
+Come viene gestita l'esecuzione dei processi nei moderni sistemi operativi per permettere l'esecuzione di più processi in contemporanea?
+
+A) System Call
+B) Batch Processing
+C) Multithreading
+D) Time Sharing
+E) Sincronizzazione
+Quiz 14
+Quale algoritmo di scheduling è basato su livelli di priorità dove ogni coda ha il suo proprio algoritmo di scheduling?
+
+A) Priority Scheduling
+B) Round Robin
+C) Multi-Level Queue Scheduling
+D) First-Come First Served
+E) Shortest-Job First
+Quiz 15
+Nel processo di cambio di contesto (Context Switching), cosa deve fare lo scheduler quando decide di assegnare la CPU a un nuovo processo?
+
+A) Terminare il processo corrente
+B) Salvare lo stato del processo corrente e caricare il nuovo processo
+C) Incrementare il contatore del programma
+D) Aggiornare il Process Control Block
+E) Assegnare una nuova priorità al processo
